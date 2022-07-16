@@ -8,19 +8,58 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Main</title>
 </head>
 
 <body>
-    <div class="container">
-        aboba
-    </div>
-    <a class="abobus" href="#!">aboba</a>
+    <header class="header">
+        <div class="container">
+            <div class="d-flex align-items-center">
+
+                <div class="header__catalog d-flex align-items-center">
+                    <div class="etc">
+                        <img src="/image/svg/header/catalog sign.svg" alt="etc">
+                    </div>
+                    <span class="text-white">Каталог</span>
+                </div>
+
+                <div class="header__search d-flex">
+                    <input type="text" placeholder="Пошук" class="header__input">
+                </div>
+
+                <div class="header__user d-flex align-items-center">
+                    <img src="/image/svg/header/User.svg" alt="user">
+                    <span class="text-white">Увійти</span>
+                </div>
+
+                <nav class="header__functions d-flex align-items-center">
+                    <ul class="d-flex align-items-center justify-content-center">
+                        <li class="header__functions__li list-unstyled">
+                            <a href="">
+                                <img src="/image/svg/header/comparison.svg" alt="comparison">
+                            </a>
+                        </li>
+                        <li class="header__functions__li list-unstyled">
+                            <a href="">
+                                <img src="/image/svg/header/like.svg" alt="like">
+                            </a>
+                        </li>
+                        <li class="header__functions__li list-unstyled">
+                            <a href="">
+                                <img src="/image/svg/header/basket.svg" alt="basket">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
