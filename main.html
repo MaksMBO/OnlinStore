@@ -21,11 +21,32 @@
         <div class="container">
             <div class="d-flex align-items-center">
 
+                <!-- Це кнопка, чи воно завжди відкрито (в місці де перегляд товару воно закрито) -->
                 <div class="header__catalog d-flex align-items-center">
-                    <div class="etc">
+
+                    <!-- <span class="text-white">Каталог</span> -->
+                    <button onclick="myFunction()" class="dropbtn">
                         <img src="/image/svg/header/catalog sign.svg" alt="etc">
+                        <span>Каталог</span>
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#smartphones">Смартфони</a>
+                        <a href="#televisions">Телевізори</a>
+                        <a href="#cameras">Камери</a>
+                        <a href="#audio">Аудіо</a>
+                        <a href="#fitness">Фітнес</a>
+                        <a href="#gaming">Геймінг</a>
+                        <a href="#PersonalTransport">Персональний транспорт</a>
+                        <a href="#computers">Комп'ютери та ноутбуки</a>
+                        <a href="#watch">Смарт годинники</a>
+                        <a href="#appliances">Побутова техніка</a>
+                        <a href="#SmartHome">Розумний дім</a>
+                        <a href="#forcars">Товари для авто</a>
+                        <a href="#accessories">Аксесуари</a>
+                        <a href="#backpacks">Рюкзаки та сумки</a>
+                        <a href="#clothes">Одяг</a>
+                        <a href="#children">Дітям</a>
                     </div>
-                    <span class="text-white">Каталог</span>
                 </div>
 
                 <div class="header__search d-flex">
@@ -64,6 +85,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
