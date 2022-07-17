@@ -14,7 +14,7 @@
 }
 
 .header__search {
-    width: 684px;
+    width: 670px;
     margin-left: 30px;
 }
 
@@ -95,24 +95,6 @@
 
 .show {
     display: block;
-}
-
-@media(max-width: 1399px) {
-    .dropdown-content {
-        width: 296.84px;
-    }
-}
-
-@media(max-width: 1199px) {
-    .dropdown-content {
-        width: 230.86px;
-    }
-}
-
-@media(max-width: 991px) {
-    .dropdown-content {
-        width: 142.88px;
-    }
 }
 
 .myDropdown a:last-child {
