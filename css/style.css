@@ -120,3 +120,41 @@
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.catalog {
+    margin-top: 60px;
+}
+
+.catalog__name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    min-height: 39px;
+    word-break: break-word;
+    margin: 5px 0;
+}
+
+.catalog__col {
+    background-color: #D9D9D9;
+    border-radius: 7px;
+    padding: 20px 10px 15px 10px;
+}
+
+.catalog__img {
+    width: 100%;
+}
+
+.catalog__buy {
+    width: 100%;
+}
+
+.catalog__price {
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+img[alt="catalog__division"] {
+    margin-right: 10px;
+}

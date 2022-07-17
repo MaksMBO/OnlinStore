@@ -23,3 +23,4 @@ let menu = document.querySelector("div.myDropdown")
 buttonCatalog.addEventListener("mouseenter", function () {
   document.getElementById("myDropdown").classList.toggle("show");
 });
+
