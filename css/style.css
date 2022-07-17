@@ -14,7 +14,7 @@
 }
 
 .header__search {
-    width: 584px;
+    width: 684px;
     margin-left: 30px;
 }
 
@@ -41,6 +41,7 @@
 
 .header__functions {
     margin-left: 20px;
+    margin-left: auto;
 }
 
 .header__functions__li:not(:last-child) {
@@ -114,4 +115,17 @@
     }
 }
 
+.myDropdown a:last-child {
+    margin-top: 30px;
+    ;
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.advertising img {
+    height: 450px;
+
+    float: right;
+    margin: 35px 0 35px 0;
+    width: 72%;
+}
