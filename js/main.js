@@ -1,21 +1,14 @@
-// function myFunction() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-// }
+function showLeftMenu() {
+  document.getElementById("myDropdown__mobile").style.display = "block";
+  document.body.style.overflow = 'hidden';
+}
 
-// window.onclick = function(event) {
-//   if (!event.target.matches('.dropbtn') & !event.target.matches('.dropbtn__img') & !event.target.matches('.dropbtn__span')) {
-
-//   var dropdowns = document.getElementsByClassName("dropdown-content");
-//   var i;
-//   for (i = 0; i < dropdowns.length; i++) {
-//     var openDropdown = dropdowns[i];
-//     if (openDropdown.classList.contains('show')) {
-//       openDropdown.classList.remove('show');
-//     }
-//   }
-// }
-// }
-
+window.onclick = function (event) {
+  if (!event.target.matches('.dropdown-content__mobile') & !event.target.matches('.dropbtn__mobile') & !event.target.matches('.dropbtn__img')) {
+    document.getElementById("myDropdown__mobile").style.display = "none";
+    document.body.style.overflow = 'auto';
+  }
+}
 
 let buttonCatalog = document.querySelector("button.dropbtn");
 let menu = document.querySelector("div.myDropdown")

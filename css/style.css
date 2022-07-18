@@ -2,6 +2,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.body__background {
+    background: rgba(197, 197, 199, 0.2);
+}
+
+
 .header {
     height: 56px;
     background: #8A8A8A;
@@ -10,7 +15,6 @@
 .header__catalog {
     width: 338px;
     height: 56px;
-    background: #515151;
 }
 
 .header__search {
@@ -65,6 +69,7 @@
 
     font-weight: 500;
     font-size: 16px;
+    display: flex;
 }
 
 .dropbtn span {
@@ -79,6 +84,7 @@
     min-width: 160px;
     overflow: auto;
     width: 338px;
+    z-index: 50;
 }
 
 .dropdown-content a {
@@ -104,6 +110,116 @@
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.dropdown-content__mobile {
+    left: 0px;
+    z-index: 1010;
+
+    top: 0;
+    width: calc(100% - 56px);
+    bottom: 0;
+    padding: 0;
+    position: fixed;
+    max-width: 320px;
+    background: #fff;
+    overflow-y: auto;
+}
+
+.left__menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 401;
+    position: fixed;
+    background: rgba(0, 0, 0, .54);
+}
+
+#myDropdown__mobile {
+    display: none;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width:991.5px) {
+
+    .header__user span,
+    .header__user img,
+    .dropbtn,
+    .header__functions__li:not(:first-child) {
+        display: none;
+    }
+
+    .dropbtn__mobile {
+        background: none;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: auto;
+        display: flex;
+        padding-top: 15px;
+    }
+
+    .header__catalog {
+        width: auto;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .header__functions {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 5px;
+
+    }
+
+    img[alt="comparison"],
+    img[alt="dropbtn__img"] {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header ul {
+        padding: 0;
+    }
+
+    .header {
+        height: 91px;
+    }
+
+    .header__all {
+        position: relative;
+    }
+
+    .header__search {
+        margin: 0;
+        width: auto;
+    }
+
+    .header__functions__li:not(:last-child) {
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .dropbtn__mobile {
+        display: none;
+    }
+
+    .header__all {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
 .advertising img {
     height: 450px;
 
@@ -116,6 +232,23 @@
 
 .brands ul {
     padding: 0;
+}
+
+.brands__link:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 991.5px) {
+    .brands {
+        overflow: auto;
+    }
+
+
+    .brands::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -135,17 +268,21 @@
 }
 
 .catalog__col {
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     border-radius: 7px;
     padding: 20px 10px 15px 10px;
+    margin: 12px 0;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
 }
 
 .catalog__img {
     width: 100%;
+
 }
 
 .catalog__buy {
     width: 100%;
+    margin-top: 20px;
 }
 
 .catalog__price {
@@ -158,3 +295,13 @@
 img[alt="catalog__division"] {
     margin-right: 10px;
 }
+
+.catalog__button__like {
+    background: none;
+}
+
+.catalog__button__like img {
+    width: 20px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */

@@ -16,17 +16,22 @@
     <title>Main</title>
 </head>
 
-<body>
+<body class="body__background" id="body__background">
     <header class="header">
         <div class="container">
-            <div class="d-flex align-items-center">
+            <div class=" header__all">
 
                 <div class="header__catalog d-flex align-items-center">
 
-                    <button class="dropbtn d-flex align-items-center">
+                    <button class="dropbtn  align-items-center">
                         <img src="./image/svg/header/catalog sign.svg" alt="etc" class="dropbtn__img">
                         <span class="dropbtn__span">Каталог</span>
                     </button>
+
+                    <button class="dropbtn__mobile align-items-center" onclick="showLeftMenu()">
+                        <img src="./image/svg/header/catalog sign.svg" alt="etc" class="dropbtn__img">
+                    </button>
+
                     <div id="myDropdown" class="dropdown-content">
                         <a href="#smartphones" class="dropdown__link">
                             <img src="./image/svg/catalogIcon/smartphone.svg" alt="smartphones">
@@ -94,6 +99,58 @@
                             <span>Дітям</span>
                         </a>
                     </div>
+
+
+                    <div class="left__menu" id="myDropdown__mobile">
+                        <div class="dropdown-content__mobile">
+                            asdfsalfjasljdfffff
+                            asfd
+                            sfd
+
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+                            sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3asfd
+                            dfasd
+
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="header__search d-flex">
@@ -127,6 +184,9 @@
             </div>
         </div>
     </header>
+
+
+
 
     <main class="main">
         <div class="container">
@@ -194,87 +254,111 @@
     <section class="catalog">
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="catalog__col d-flex align-items-center justify-content-center flex-column">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="catalog__col d-flex  flex-column position-relative">
                         <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                         <span class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                             Console</span>
 
                         <div class="d-flex catalog__buy justify-content-end align-items-center">
                             <span class="catalog__price">11&nbsp999</span>
-                            <img src="image/svg/productTile/division.svg" alt="catalog__division">
-                            <img src="image/svg/productTile/basket.svg" alt="catalog__basket">
+                            <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                            <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
                         </div>
+                        <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                            <img src="./image/svg/productTile/like-none.svg" alt="like">
+                        </button>
+
                     </div>
                 </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="catalog__col d-flex align-items-center justify-content-center flex-column">
+
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="catalog__col d-flex  flex-column position-relative">
                         <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                         <span class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                             Console</span>
 
                         <div class="d-flex catalog__buy justify-content-end align-items-center">
                             <span class="catalog__price">11&nbsp999</span>
-                            <img src="image/svg/productTile/division.svg" alt="catalog__division">
-                            <img src="image/svg/productTile/basket.svg" alt="catalog__basket">
+                            <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                            <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
                         </div>
+                        <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                            <img src="./image/svg/productTile/like-none.svg" alt="like">
+                        </button>
+
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="catalog__col d-flex align-items-center justify-content-center flex-column">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="catalog__col d-flex  flex-column position-relative">
                         <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                         <span class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                             Console</span>
 
                         <div class="d-flex catalog__buy justify-content-end align-items-center">
                             <span class="catalog__price">11&nbsp999</span>
-                            <img src="image/svg/productTile/division.svg" alt="catalog__division">
-                            <img src="image/svg/productTile/basket.svg" alt="catalog__basket">
+                            <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                            <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
                         </div>
+                        <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                            <img src="./image/svg/productTile/like-none.svg" alt="like">
+                        </button>
+
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="catalog__col d-flex align-items-center justify-content-center flex-column">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="catalog__col d-flex  flex-column position-relative">
                         <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                         <span class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                             Console</span>
 
                         <div class="d-flex catalog__buy justify-content-end align-items-center">
                             <span class="catalog__price">11&nbsp999</span>
-                            <img src="image/svg/productTile/division.svg" alt="catalog__division">
-                            <img src="image/svg/productTile/basket.svg" alt="catalog__basket">
+                            <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                            <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
                         </div>
+                        <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                            <img src="./image/svg/productTile/like-none.svg" alt="like">
+                        </button>
+
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="catalog__col d-flex align-items-center justify-content-center flex-column">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="catalog__col d-flex  flex-column position-relative">
                         <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                         <span class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                             Console</span>
 
                         <div class="d-flex catalog__buy justify-content-end align-items-center">
                             <span class="catalog__price">11&nbsp999</span>
-                            <img src="image/svg/productTile/division.svg" alt="catalog__division">
-                            <img src="image/svg/productTile/basket.svg" alt="catalog__basket">
+                            <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                            <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
                         </div>
+                        <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                            <img src="./image/svg/productTile/like-none.svg" alt="like">
+                        </button>
+
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="catalog__col d-flex align-items-center justify-content-center flex-column">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="catalog__col d-flex  flex-column position-relative">
                         <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                         <span class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                             Console</span>
 
                         <div class="d-flex catalog__buy justify-content-end align-items-center">
                             <span class="catalog__price">11&nbsp999</span>
-                            <img src="image/svg/productTile/division.svg" alt="catalog__division">
-                            <img src="image/svg/productTile/basket.svg" alt="catalog__basket">
+                            <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                            <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
                         </div>
+                        <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                            <img src="./image/svg/productTile/like-none.svg" alt="like">
+                        </button>
+
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
