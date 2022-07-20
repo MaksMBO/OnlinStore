@@ -181,7 +181,7 @@
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.register {
+.login {
     top: 0;
     left: 0;
     right: 0;
@@ -194,9 +194,8 @@
     justify-content: center;
 }
 
+.login__menu,
 .register__menu {
-    width: 344px;
-    height: 420px;
     background: white;
     border-radius: 20px;
     padding: 24px;
@@ -206,18 +205,31 @@
     justify-content: space-between;
 }
 
+.login__menu {
+    width: 344px;
+    height: 420px;
+}
+
+.register__menu {
+    width: 344px;
+    height: 476px;
+}
+
+
+.login__title,
 .register__title {
     font-weight: 500;
     font-size: 24px;
     color: #000000;
 }
 
-.register__subtitle {
+.login__subtitle {
     font-weight: 500;
     font-size: 14px;
     color: #999999;
 }
 
+.login__input,
 .register__input {
     width: 296px;
     height: 40px;
@@ -226,13 +238,15 @@
     border-radius: 8px;
 }
 
-.register__else {
+.login__else,
+.register__subtitle {
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     color: #999999;
 }
 
+.login__next,
 .register__next {
     background: #FFAB49;
     border-radius: 8px;
@@ -245,11 +259,12 @@
     color: #FFFFFF;
 }
 
+.login__menu:first-child,
 .register__menu:first-child {
     padding-top: 24px;
 }
 
-.register__another {
+.login__another {
     width: 296px;
     height: 44px;
     background: #FFFFFF;
@@ -258,13 +273,25 @@
     font-weight: 500;
     font-size: 20px;
     color: #999999;
+    align-items: center;
 }
 
+.login__link,
 .register__link {
     font-weight: 500;
     font-size: 12px;
     text-decoration: none;
     color: #3B6D9A;
+    border: none;
+    background: none;
+}
+
+.login__email {
+    display: none;
+}
+
+.register__menu {
+    display: none;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
