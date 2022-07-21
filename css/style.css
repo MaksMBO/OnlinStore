@@ -378,7 +378,6 @@
 
 .advertising img {
     height: 450px;
-
     margin: 35px 0 35px 0;
     margin-left: auto;
     width: 72%;
@@ -458,4 +457,103 @@ img[alt="catalog__division"] {
 
 .catalog__button__like img {
     width: 20px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.advertising .slider {
+    min-width: 0;
+    position: relative;
+    padding: 0 0;
+}
+
+/* Слайдер */
+.advertising .slick-slider {}
+
+
+/* Слайдер запущен */
+.advertising .slick-slider.slick-initialized {}
+
+/* Слайдер с точками */
+.advertising .slick-slider.slick-dotted {}
+
+/* Ограничивающая оболочка */
+.advertising .slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.advertising .slick-track {
+    display: flex;
+}
+
+/* Слайд */
+.advertising .slick-slide {}
+
+/* Слайд активный (показывается) */
+.advertising .slick-slide.slick-active {}
+
+/* Слайд основной */
+.advertising .slick-slide.slick-current {}
+
+/* Слайд по центру */
+.advertising .slick-slide.slick-center {}
+
+/* Клонированный слайд */
+.advertising .slick-slide.slick-cloned {}
+
+/* Стрелка */
+.advertising .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 33px;
+    height: 68px;
+    border: 0;
+    margin: -34px 0 0 0;
+}
+
+/* Стрелка влево */
+.advertising .slick-arrow.slick-prev {
+    left: 0;
+    background: url("/image/svg/slider/right.svg") 0 0/100% no-repeat;
+}
+
+/* Стрелка вправо */
+.advertising .slick-arrow.slick-next {
+    right: 0;
+    background: url("/image/svg/slider/left.svg") 0 0/100% no-repeat;
+}
+
+/* Стрелка не активная */
+.advertising .slick-arrow.slick-disabled {}
+
+/* Точки (булиты) */
+.advertising .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advertising .slick-dots li {
+    list-style: none;
+}
+
+.advertising .slick-dots li:not(:last-child) {
+    margin-right: 25px;
+}
+
+/* Активная точка */
+.advertising .slick-dots li.slick-active button {
+    background: #000000;
+}
+
+/* Элемент точки */
+.advertising .slick-dots li button {
+    font-size: 0;
+    width: 36.27px;
+    height: 2px;
+    background: #D9D9D9;
+    border: 0;
 }
