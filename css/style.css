@@ -650,12 +650,13 @@ element.style {
 }
 
 .container-0-2-302 {
-    height: 380px;
+    height: 400px;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider-nav__item {
+.slider_nav__item {
     width: 48px;
     height: 48px;
     display: flex;
@@ -675,12 +676,16 @@ element.style {
 .current-image {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 .full-image {
-    height: 100%;
-    width: auto;
+    /* height: 380px;
+    width: auto; */
+    max-width: 100%;
+    max-height: 380px;
 }
 
 .right-0-2-299 {
@@ -719,3 +724,34 @@ element.style {
 }
 
 /* СЛАЙДЕР ПРОДУКТИ ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.slider_nav .slick-list {
+    overflow: hidden;
+}
+
+.slider_nav_big .slick-list {
+    overflow: hidden;
+}
+
+.slider_nav_big .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_nav_big {
+    min-width: 0;
+
+}
+
+.slider_nav__item_big {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_nav__item {
+    height: 42px;
+}
