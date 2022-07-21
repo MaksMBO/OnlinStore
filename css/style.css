@@ -492,13 +492,13 @@ img[alt="catalog__division"] {
 /* Стрелка влево */
 .advertising .slick-arrow.slick-prev {
     left: 0;
-    background: url("/image/svg/slider/right.svg") 0 0/100% no-repeat;
+    background: url("../image/svg/slider/right.svg") 0 0/100% no-repeat;
 }
 
 /* Стрелка вправо */
 .advertising .slick-arrow.slick-next {
     right: 0;
-    background: url("/image/svg/slider/left.svg") 0 0/100% no-repeat;
+    background: url("../image/svg/slider/left.svg") 0 0/100% no-repeat;
 }
 
 /* Точки (булиты) */
@@ -655,18 +655,7 @@ element.style {
     flex-direction: row-reverse;
 }
 
-.active-preview-image {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    padding: 4px;
-    border: 1px solid #FF8637;
-}
-
-.inactive-preview-image {
+.slider-nav__item {
     width: 48px;
     height: 48px;
     display: flex;
@@ -728,3 +717,5 @@ element.style {
     height: 16px;
     margin-right: 2px;
 }
+
+/* СЛАЙДЕР ПРОДУКТИ ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
