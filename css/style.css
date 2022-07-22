@@ -667,6 +667,14 @@ element.style {
     border: 1px solid transparent;
 }
 
+.slider_nav__item.slick-active:hover:not(.slider_nav__item.slick-current) {
+    border-color: #d5d5d5;
+}
+
+.slider_nav__item.slick-current {
+    border-color: #fd7e14;
+}
+
 .preview-image {
     height: 100%;
     max-width: 100%;
