@@ -741,7 +741,7 @@ element.style {
 
 .slider_nav_big {
     min-width: 0;
-
+    z-index: 0;
 }
 
 .slider_nav__item_big {
