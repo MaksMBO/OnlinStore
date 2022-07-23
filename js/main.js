@@ -3,22 +3,19 @@ function showLeftMenu() {
   document.body.style.overflow = 'hidden';
 }
 
-window.onclick = function (event) {
-  if (!event.target.matches('.dropdown-content__mobile') & !event.target.matches('.dropbtn__mobile') & !event.target.matches('.dropbtn__img')
-    & !event.target.matches('.not__close')) {
-    document.getElementById("myDropdown__mobile").style.display = "none";
-    document.body.style.overflow = 'auto';
-  }
-}
-
 function showlogin() {
   document.getElementById("login").style.display = "flex";
   document.body.style.overflow = 'hidden';
 }
 
 window.onclick = function (event) {
-  if (event.target.matches('.login') & !event.target.matches('.header__user__button') & !event.target.matches('.header__user__text')) {
+  if (event.target.matches('.login')) {
     document.getElementById("login").style.display = "none";
+    document.body.style.overflow = 'auto';
+  }
+
+  if (event.target.matches('.left__menu')) {
+    document.getElementById("myDropdown__mobile").style.display = "none";
     document.body.style.overflow = 'auto';
   }
 }

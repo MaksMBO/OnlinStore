@@ -377,10 +377,11 @@
 
 
 .advertising img {
-    height: 450px;
+    height: 90%;
     margin: 35px 0 35px 0;
     margin-left: auto;
-    width: 72%;
+    width: 100%;
+    border-radius: 15px;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -465,6 +466,8 @@ img[alt="catalog__division"] {
     min-width: 0;
     position: relative;
     padding: 0 0;
+    width: 71.5%;
+    margin-left: auto;
 }
 
 /* Ограничивающая оболочка */
@@ -484,21 +487,27 @@ img[alt="catalog__division"] {
     z-index: 10;
     font-size: 0;
     width: 33px;
-    height: 68px;
+    height: 47px;
     border: 0;
     margin: -34px 0 0 0;
+}
+
+.advertising .slider__item,
+.advertising .slick-list {
+    display: flex;
+    margin-left: auto;
 }
 
 /* Стрелка влево */
 .advertising .slick-arrow.slick-prev {
     left: 0;
-    background: url("../image/svg/slider/right.svg") 0 0/100% no-repeat;
+    background: url("../image/svg/slider/right.svg") 0 0 no-repeat;
 }
 
 /* Стрелка вправо */
 .advertising .slick-arrow.slick-next {
     right: 0;
-    background: url("../image/svg/slider/left.svg") 0 0/100% no-repeat;
+    background: url("../image/svg/slider/left.svg") 0 0 no-repeat;
 }
 
 /* Точки (булиты) */
@@ -528,6 +537,22 @@ img[alt="catalog__division"] {
     height: 2px;
     background: #D9D9D9;
     border: 0;
+}
+
+@media (max-width: 991.5px) {
+    .advertising .slider {
+        width: 100%;
+    }
+
+    .advertising .slick-dots {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .advertising img {
+        height: 80%;
+    }
 }
 
 /* INFO ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
