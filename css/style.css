@@ -13,7 +13,7 @@
 }
 
 .header__catalog {
-    width: 338px;
+    min-width: 338px;
     height: 56px;
 }
 
@@ -60,6 +60,15 @@
     border: 0;
     background: none;
     padding: 0;
+}
+
+.button__catalog {
+    background: none;
+    padding: 0;
+}
+
+.button__catalog:not(:last-child) {
+    margin-right: 10px;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -359,6 +368,10 @@
         margin: 0;
     }
 
+    .dropdown-content {
+        display: none;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -446,10 +459,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-}
-
-img[alt="catalog__division"] {
-    margin-right: 10px;
 }
 
 .catalog__button__like {
