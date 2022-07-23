@@ -188,9 +188,9 @@
     padding: 10px 0;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
     .left__menu {
-        display: none!important;
+        display: none !important;
     }
 }
 
@@ -473,6 +473,12 @@
 
 .catalog__button__like img {
     width: 20px;
+}
+
+img[alt="UAN"] {
+    width: 10px;
+    height: 12px;
+    margin-left: -5px;
 }
 
 
