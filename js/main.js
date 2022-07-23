@@ -5,12 +5,15 @@ function showLeftMenu() {
 
 function showlogin() {
   document.getElementById("login").style.display = "flex";
+  document.getElementById("login__menu").style.display = "flex";
   document.body.style.overflow = 'hidden';
 }
 
 window.onclick = function (event) {
   if (event.target.matches('.login')) {
     document.getElementById("login").style.display = "none";
+    document.getElementById("register__menu").style.display = "none";
+    document.getElementById("login__menu").style.display = "none";
     document.body.style.overflow = 'auto';
   }
 
@@ -39,6 +42,7 @@ function loginDisplayNone(email = "none", number = "block") {
 }
 
 function showRegister() {
+  document.getElementById("login").style.display = "flex";
   document.getElementById("register__menu").style.display = "flex";
   document.getElementById("login__menu").style.display = "none";
 }
