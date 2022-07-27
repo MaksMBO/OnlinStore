@@ -1,9 +1,7 @@
-$(function () {
-    $(".slick-current .slider_nav__item_big .full-image").jqZoom({
-        selectorWidth: 30,
-        selectorHeight: 30,
-        viewerWidth: 400,
-        viewerHeight: 300
-    });
-});
 
+function zoom(receivedIMG, placeIMG) {
+    let allLinks = document.querySelector(receivedIMG);
+    let linkIMG = allLinks.getAttribute('src');
+
+    $(placeIMG).html(`<div class='test position-absolute'><img src='${linkIMG}'class= 'full-image'></div >`);
+}
