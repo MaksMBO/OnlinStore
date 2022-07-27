@@ -14,5 +14,6 @@ $(document).ready(function () {
         fade: true,
         asNavFor: ".slider_nav",
         draggable: false,
+        waitForAnimate: false,
     })
 });
