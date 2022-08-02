@@ -832,14 +832,11 @@ element.style {
 
 .containerForZoom {
     position: absolute;
-    width: 400px;
+    width: 600px;
     height: 400px;
-    top: 25%;
-    left: 25%;
+    top: 0;
+    left: 0;
     z-index: 5;
-    display: none;
-    /* background-image: url('../image/temp/xbox1.jpg'); */
-    /* background-position: 1, 1; */
+    display: block;
     background-repeat: no-repeat;
-    /* transform: scale(2); */
 }
