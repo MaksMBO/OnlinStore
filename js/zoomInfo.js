@@ -1,11 +1,79 @@
 function zoom(receivedIMG, placeIMG, placeIMGId) {
     let allLinks = document.querySelector(receivedIMG);
     let linkIMG = allLinks.getAttribute('src');
-   
-    $(placeIMG).html(`<div class='test position-absolute'><img src='${linkIMG}'class= 'full-image'></div >`);
-     document.getElementById(`${placeIMGId}`).style.display = "block";
+
+    // $(placeIMG).html(`<div class='image__zoom position-absolute'></div>`);
+    // <img src='${linkIMG}'class='full-image__zoom'></img>
+    document.getElementById(`${placeIMGId}`).style.display = "block";
+    // document.getElementById(`${placeIMGId}`).style.backgroundImage = URL(linkIMG);
+
 }
 
 function zoomLeave(placeIMG) {
     document.getElementById(`${placeIMG}`).style.display = "none";
 }
+
+let globalX = 0;
+let globalY = 0;
+
+$(document).on('mousemove', function (e) {
+    globalX = e.pageX;
+    globalY = e.pageY;
+});
+
+$('.slider_nav__item_big').on('mousemove', function () {
+    let zoom = 7;
+    let img = $('.slick-current .full-image').attr('src');
+    let imgBlock = $(this).find('img');
+    let imgWidth = imgBlock.width();
+    let imgHeight = imgBlock.height();
+    let overlay = $('.containerForZoom');
+    let cursor = $('.zoom__cursor');
+    cursor.css('width', overlay.width() / zoom + 'px');
+    cursor.css('height', overlay.height() / zoom + 'px');
+    let cursorWidth = cursor.outerWidth();
+    let cursorHeight = cursor.outerHeight();
+    let posX = globalX - $(this).offset().left - cursorWidth / 2;
+    let posY = globalY - $(this).offset().top - cursorHeight / 2;
+
+    let maxWidth = $('.slider_nav_big').width();
+
+
+    if (posY < 0) {
+        posY = 0;
+    }
+
+    if (posX < maxWidth / 2 - imgWidth / 2) {
+        posX = maxWidth / 2 - imgWidth / 2;
+    }
+
+
+    if (posX > maxWidth / 2 + imgWidth / 2 - cursorWidth) {
+        posX = maxWidth / 2 + imgWidth / 2 - cursorWidth;
+    }
+
+
+
+    if (posY > ($(this).height() - cursorHeight)) {
+        posY = $(this).height() - cursorHeight;
+    }
+    cursor.css('left', posX + 'px');
+    cursor.css('top', posY + 'px');
+    cursor.show();
+
+    posX -= imgWidth / 2;
+    posX *= zoom;
+
+    posY *= zoom;
+    overlay.css('background-image', `url(${img})`);
+    overlay.css('background-size', (imgWidth * zoom) + 'px');
+    overlay.css('background-position', `${-posX}px ${-posY}px`);
+    overlay.show();
+
+});
+
+$('.full-image').on('mouseleave', function () {
+    $('.zoom__cursor').hide();
+    // $('.containerForZoom').hide();
+});
+

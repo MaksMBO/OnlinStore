@@ -744,6 +744,7 @@ element.style {
 
 .right-0-2-299 {
     width: calc(50% - 12px);
+    position: relative;
 }
 
 .title h1 {
@@ -804,8 +805,41 @@ element.style {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* position: relative; */
 }
 
 .slider_nav__item {
     height: 42px;
+}
+
+/* .image__cover {
+    position: relative;
+} */
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.zoom__cursor {
+    position: absolute;
+    border: #ccc 1px solid;
+    background: #fff;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    width: 145px;
+    height: 100px;
+    display: none;
+}
+
+.containerForZoom {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 25%;
+    left: 25%;
+    z-index: 5;
+    display: none;
+    /* background-image: url('../image/temp/xbox1.jpg'); */
+    /* background-position: 1, 1; */
+    background-repeat: no-repeat;
+    /* transform: scale(2); */
 }
