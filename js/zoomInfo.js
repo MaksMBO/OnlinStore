@@ -1,18 +1,3 @@
-function zoom(receivedIMG, placeIMG, placeIMGId) {
-    let allLinks = document.querySelector(receivedIMG);
-    let linkIMG = allLinks.getAttribute('src');
-
-    // $(placeIMG).html(`<div class='image__zoom position-absolute'></div>`);
-    // <img src='${linkIMG}'class='full-image__zoom'></img>
-    document.getElementById(`${placeIMGId}`).style.display = "block";
-    // document.getElementById(`${placeIMGId}`).style.backgroundImage = URL(linkIMG);
-
-}
-
-function zoomLeave(placeIMG) {
-    document.getElementById(`${placeIMG}`).style.display = "none";
-}
-
 let globalX = 0;
 let globalY = 0;
 
@@ -67,4 +52,3 @@ $('.slider_nav_big').on('mouseleave', function () {
     $('.zoom__cursor').hide();
     $('.containerForZoom').hide();
 });
-
