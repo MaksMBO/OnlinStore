@@ -455,6 +455,10 @@
     margin-top: 60px;
 }
 
+.catalog .col-xl-2 {
+    padding: 0 5px;
+}
+
 .catalog__name {
     display: -webkit-box;
     -webkit-line-clamp: 2;
