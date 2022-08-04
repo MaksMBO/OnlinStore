@@ -9,7 +9,10 @@
 
 .header {
     height: 56px;
-    background: #8A8A8A;
+    background: #3c3c3c;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
 }
 
 .header__catalog {
@@ -95,11 +98,13 @@
     display: none;
     top: 56px;
     position: absolute;
-    background: #DBDBDB;
+    background: #ffffff;
     min-width: 160px;
     overflow: auto;
     width: 338px;
     z-index: 50;
+    filter: drop-shadow(0px 12px 6px rgba(0, 0, 0, .2));
+    border-radius: 0 0 10px 10px;
 }
 
 .dropdown-content a {
@@ -120,6 +125,16 @@
 
 .myDropdown a:last-child {
     margin-top: 30px;
+}
+
+.header__background {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .4);
+    display: none;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -152,7 +167,7 @@
 }
 
 .left__menu__head {
-    background: #8A8A8A;
+    background: #3c3c3c;
     padding: 15px 10px;
 }
 
@@ -413,6 +428,10 @@
     margin-right: 10px;
 }
 
+.companies {
+    margin-top: 90px;
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 991.5px) {
@@ -423,6 +442,10 @@
 
     .brands::-webkit-scrollbar {
         display: none;
+    }
+
+    .companies {
+        margin-top: 90px;
     }
 }
 
@@ -447,6 +470,11 @@
     border-radius: 7px;
     padding: 20px 10px 15px 10px;
     margin: 12px 0;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.05));
+    transition: .4s;
+}
+
+.catalog__col:hover {
     filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -481,6 +509,12 @@ img[alt="UAN"] {
     margin-left: -5px;
 }
 
+@media (max-width: 540px) {
+    .catalog__price {
+        font-size: 18px;
+    }
+}
+
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .advertising .slider {
@@ -488,6 +522,7 @@ img[alt="UAN"] {
     position: relative;
     padding: 0 0;
     width: 71.5%;
+    top: 35px;
     margin-left: auto;
 }
 
@@ -563,6 +598,7 @@ img[alt="UAN"] {
 @media (max-width: 991.5px) {
     .advertising .slider {
         width: 100%;
+        top: 70px;
     }
 
     .advertising .slick-dots {
@@ -841,4 +877,8 @@ element.style {
     display: none;
     background-repeat: no-repeat;
     box-shadow: 5px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.show {
+    display: block;
 }

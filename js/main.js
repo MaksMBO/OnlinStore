@@ -24,10 +24,10 @@ window.onclick = function (event) {
 }
 
 let buttonCatalog = document.querySelector("button.dropbtn");
-let menu = document.querySelector("div.myDropdown")
 
 buttonCatalog.addEventListener("mouseenter", function () {
   document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("header__background").classList.toggle("show");
 });
 
 function loginDisplayNone(email = "none", number = "block") {
