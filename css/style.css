@@ -70,6 +70,12 @@
     padding: 0;
 }
 
+.button__catalog:hover {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .4));
+    opacity: .8;
+    transition: .5s;
+}
+
 .button__catalog:not(:last-child) {
     margin-right: 10px;
 }
@@ -432,6 +438,11 @@
     margin-top: 90px;
 }
 
+.brands__link:hover {
+    opacity: .7;
+    transition: 0.5s;
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 991.5px) {
@@ -467,6 +478,14 @@
     min-height: 39px;
     word-break: break-word;
     margin: 5px 0;
+    text-decoration: none;
+    color: #3B6D9A;
+    cursor: pointer;
+}
+
+.catalog__name:hover {
+    color: #FF680A;
+    transition: .5s;
 }
 
 .catalog__col {
@@ -501,10 +520,21 @@
 
 .catalog__button__like {
     background: none;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+}
+
+.catalog__button__like:hover {
+    background: rgba(0, 0, 0, .1);
+    border-radius: 20px;
+    transition: .5s;
+    
 }
 
 .catalog__button__like img {
     width: 20px;
+    height: 20px;
 }
 
 img[alt="UAN"] {
