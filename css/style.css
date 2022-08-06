@@ -51,8 +51,20 @@
     margin-left: auto;
 }
 
+.header__functions__li {
+    padding: 0 8px !important;
+}
+
 .header__functions__li:not(:last-child) {
     margin-right: 14px;
+}
+
+.header__functions__li:hover {
+    background-color: #2d2d2d;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__functions ul {
@@ -62,7 +74,11 @@
 .header__user__button {
     border: 0;
     background: none;
-    padding: 0;
+    padding: 9.5px 8px;
+}
+
+.header__user__button:hover {
+    background: #2d2d2d;  
 }
 
 .button__catalog {
