@@ -21,6 +21,10 @@ window.onclick = function (event) {
     document.getElementById("myDropdown__mobile").style.display = "none";
     document.body.style.overflow = 'auto';
   }
+
+  if (event.target.matches('.catalog__mobile') || event.target.matches('.catalog__mobile img[alt="exit"]')) {
+    document.getElementById("catalog__mobile").style.display = "none";
+  }
 }
 
 let buttonCatalog = document.querySelector("button.dropbtn");
@@ -50,4 +54,8 @@ function showRegister() {
 function closeRegister() {
   document.getElementById("register__menu").style.display = "none";
   document.getElementById("login__menu").style.display = "flex";
+}
+
+function showMobileCatalog() {
+  document.getElementById("catalog__mobile").style.display = "flex";
 }

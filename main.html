@@ -118,13 +118,13 @@
                                 <ul class="">
                                     <li class="left__menu__function list-unstyled ">
                                         <a href="" class="text-decoration-none ">
-                                            <img src="./image/svg/header/home.svg" alt="comparison" class="">
+                                            <img src="./image/svg/header/home.svg" alt="comparison" class="main__mobile">
                                             <span class="text-black-50 ">Головна сторінка</span>
                                         </a>
                                     </li>
                                     <li class="left__menu__function list-unstyled ">
-                                        <a href="" class="text-decoration-none ">
-                                            <img src="./image/svg/header/catalogLeft.svg" alt="like">
+                                        <a class="text-decoration-none " onclick="showMobileCatalog()">
+                                            <img src="./image/svg/header/catalogLeft.svg" alt="catalog__mobile">
                                             <span class="text-black-50 ">Каталог</span>
                                         </a>
                                     </li>
@@ -164,6 +164,130 @@
                                     </li>
                                 </ul>
                             </nav>
+
+                            <div class="catalog__mobile" id="catalog__mobile">
+                                <div class="catalog__mobile__all d-flex flex-column ">
+                                    <div class="catalog__mobile__top d-flex justify-content-between align-items-center">
+                                        <span class="catalog__mobile__title">Каталог</span>
+                                        <img src="./image/svg/catalog__mobile/no.svg" alt="exit">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#smartphones"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/smartphone.svg" alt="smartphones">
+                                                <span>Смартфони</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#televisions"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/tv.svg" alt="televisions">
+                                                <span>Телевізори</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#cameras"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/camera.svg" alt="cameras">
+                                                <span>Камери</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#audio"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/audio.svg" alt="audio">
+                                                <span>Аудіо</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#fitness"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/fitnes.svg" alt="fitness">
+                                                <span>Фітнес</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#gaming"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/geyming.svg" alt="gaming">
+                                                <span>Геймінг</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#PersonalTransport"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/scooter.svg" alt="PersonalTransport">
+                                                <span>Персональний транспорт</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#computers"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/computer.svg" alt="computers">
+                                                <span>Комп'ютери та ноутбуки</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#watch"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/watch.svg" alt="watch">
+                                                <span>Смарт годинники</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#appliances"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/appliances.svg" alt="appliances">
+                                                <span>Побутова техніка</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#SmartHome"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/SmartHouse.svg" alt="SmartHome">
+                                                <span>Розумний дім</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#forcars"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/carsvg.svg" alt="forcars">
+                                                <span>Товари для авто</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#accessories"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/accessories.svg" alt="accessories">
+                                                <span>Аксесуари</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#backpacks"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/bag.svg" alt="backpacks">
+                                                <span>Рюкзаки та сумки</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#clothes"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/clothes.svg" alt="clothes">
+                                                <span>Одяг</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <a href="#children"
+                                                class="catalog__mobile__link d-flex justify-content-center align-items-center flex-column w-100">
+                                                <img src="./image/svg/catalogIcon/children.svg" alt="children">
+                                                <span>Дітям</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
