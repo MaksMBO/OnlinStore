@@ -23,6 +23,7 @@
 .header__search {
     width: 670px;
     margin-left: 30px;
+    position: relative;
 }
 
 .header__input {
@@ -113,7 +114,6 @@
     border: none;
     cursor: pointer;
     width: 100%;
-
     font-weight: 500;
     font-size: 16px;
     display: flex;
@@ -361,7 +361,6 @@
     font-size: 28px;
 }
 
-
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .login {
@@ -571,7 +570,7 @@
 
 
 .advertising img {
-    height: 90%;
+    height: 60vh;
     margin: 35px 0 35px 0;
     margin-left: auto;
     width: 100%;
@@ -751,6 +750,25 @@ img[alt="UAN"] {
 .advertising .slick-arrow.slick-next {
     right: 0;
     background: url("../image/svg/slider/left.svg") 0 0 no-repeat;
+    /* transition: .1s; */
+    
+}
+
+
+
+@keyframes wipe {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.advertising .slick-arrow.slick-next:active,
+.advertising .slick-arrow.slick-prev:active {
+    animation: wipe .3s cubic-bezier(.2, .6, .8, .4) forwards;
 }
 
 /* Точки (булиты) */
