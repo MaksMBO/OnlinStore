@@ -18,7 +18,7 @@ window.onclick = function (event) {
     document.body.style.overflow = 'auto';
     document.getElementById("register__menu").classList.remove("register__menu-active");
     document.getElementById("login__menu").classList.remove("login__menu-active");
-    
+
   }
 
   if (event.target.matches('.left__menu')) {
@@ -30,7 +30,6 @@ window.onclick = function (event) {
     document.getElementById("catalog__mobile").style.display = "none";
     document.getElementById("catalog__mobile__all").classList.remove("catalog__mobile__all-active");
   }
-
 }
 
 let buttonCatalog = document.querySelector("button.dropbtn");
