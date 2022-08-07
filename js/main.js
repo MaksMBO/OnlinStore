@@ -7,6 +7,7 @@ function showlogin() {
   document.getElementById("login").style.display = "flex";
   document.getElementById("login__menu").style.display = "flex";
   document.body.style.overflow = 'hidden';
+  setTimeout(animation, 0.1, "login__menu", "login__menu-active");
 }
 
 window.onclick = function (event) {
@@ -15,6 +16,9 @@ window.onclick = function (event) {
     document.getElementById("register__menu").style.display = "none";
     document.getElementById("login__menu").style.display = "none";
     document.body.style.overflow = 'auto';
+    document.getElementById("register__menu").classList.remove("register__menu-active");
+    document.getElementById("login__menu").classList.remove("login__menu-active");
+    
   }
 
   if (event.target.matches('.left__menu')) {
@@ -24,7 +28,7 @@ window.onclick = function (event) {
 
   if (event.target.matches('.catalog__mobile') || event.target.matches('.catalog__mobile img[alt="exit"]')) {
     document.getElementById("catalog__mobile").style.display = "none";
-    document.getElementById("catalog__mobile__all").classList.toggle("catalog__mobile__all-active");
+    document.getElementById("catalog__mobile__all").classList.remove("catalog__mobile__all-active");
   }
 
 }
@@ -51,18 +55,20 @@ function showRegister() {
   document.getElementById("login").style.display = "flex";
   document.getElementById("register__menu").style.display = "flex";
   document.getElementById("login__menu").style.display = "none";
+  setTimeout(animation, 0.1, "register__menu", "register__menu-active");
 }
 
 function closeRegister() {
   document.getElementById("register__menu").style.display = "none";
   document.getElementById("login__menu").style.display = "flex";
+  setTimeout(animation, 0.1, "login__menu", "login__menu-active");
 }
 
 function showMobileCatalog() {
   document.getElementById("catalog__mobile").style.display = "flex";
-  setTimeout(animationCatalog, 0.1);
+  setTimeout(animation, 0.1, "catalog__mobile__all", "catalog__mobile__all-active");
 }
 
-function animationCatalog() {
-  document.getElementById("catalog__mobile__all").classList.toggle("catalog__mobile__all-active");
+function animation(id, toggleAtr) {
+  document.getElementById(id).classList.add(toggleAtr);
 }
