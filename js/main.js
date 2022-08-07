@@ -24,7 +24,9 @@ window.onclick = function (event) {
 
   if (event.target.matches('.catalog__mobile') || event.target.matches('.catalog__mobile img[alt="exit"]')) {
     document.getElementById("catalog__mobile").style.display = "none";
+    document.getElementById("catalog__mobile__all").classList.toggle("catalog__mobile__all-active");
   }
+
 }
 
 let buttonCatalog = document.querySelector("button.dropbtn");
@@ -58,4 +60,9 @@ function closeRegister() {
 
 function showMobileCatalog() {
   document.getElementById("catalog__mobile").style.display = "flex";
+  setTimeout(animationCatalog, 0.1);
+}
+
+function animationCatalog() {
+  document.getElementById("catalog__mobile__all").classList.toggle("catalog__mobile__all-active");
 }
