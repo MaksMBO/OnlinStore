@@ -13,6 +13,8 @@
     position: fixed;
     z-index: 200;
     width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .header__catalog {
@@ -751,10 +753,8 @@ img[alt="UAN"] {
     right: 0;
     background: url("../image/svg/slider/left.svg") 0 0 no-repeat;
     /* transition: .1s; */
-    
+
 }
-
-
 
 @keyframes wipe {
     0% {
@@ -819,8 +819,9 @@ img[alt="UAN"] {
 
 /* INFO ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+
 .navigation_links {
-    margin-top: 25px;
+    margin-top: 81px;
     padding-left: 0;
 }
 
