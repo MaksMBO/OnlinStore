@@ -825,6 +825,12 @@ img[alt="UAN"] {
     padding-left: 0;
 }
 
+@media (max-width: 991.5px) {
+    .navigation_links {
+        margin-top: 116px;
+    }
+}
+
 .navigation__links_li svg {
     fill: #000000;
     opacity: 20%;
@@ -1055,9 +1061,6 @@ element.style {
     height: 42px;
 }
 
-/* .image__cover {
-    position: relative;
-} */
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -1087,4 +1090,205 @@ element.style {
 
 .show {
     display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* .sorting {
+    position: relative;
+} */
+
+.title__page h2 {
+    margin-bottom: 16px;
+}
+
+.sorting svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sorting .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sorting h4,
+.sorting p {
+    font-size: 12px;
+}
+
+.sorting h4 {
+    margin: 0 5px 0 0;
+}
+
+.sorting p {
+    color: #3B6D9A;
+    text-decoration: underline;
+}
+
+.sorting__filter p:hover {
+    transition: .3s;
+    color: #FF680A;
+}
+
+.catalog__page .container {
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns: 284px 1fr;
+}
+
+.sorting__menu {
+    position: relative;
+}
+
+.sorting__list {
+    padding: 8px 0;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    font-size: 12px;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    right: calc(100% - 24px);
+}
+
+.sorting__list a {
+    text-decoration: none;
+}
+
+.sorting__list li {
+    list-style: none;
+    padding: 0 16px;
+    height: 40px;
+    color: #3B6D9A;
+    display: flex;
+    align-items: center;
+}
+
+.sorting__list li:hover {
+    transition: .3s;
+    color: #FF680A;
+}
+
+.sorting__list ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+.catalog__filter {
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+}
+
+.catalog__filter svg {
+    width: 24px;
+    height: 24px;
+}
+
+.catalog__filter__title {
+    margin-left: 16px;
+}
+
+.filter__price__title {
+    padding: 10px 0;
+}
+
+.start__price,
+.end__price {
+    cursor: text;
+}
+
+.start__price input,
+.end__price input {
+    width: 87px;
+    padding: 10px 16px;
+    background-color: white;
+    border-radius: 10px;
+    border: 0.1px solid #515151;
+    outline: none;
+    font-size: 13px;
+    height: 40px;
+    transition: .3s;
+}
+
+.start__price input::-webkit-outer-spin-button,
+.start__price input::-webkit-inner-spin-button,
+.end__price input::-webkit-outer-spin-button,
+.end__price input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.start__price input:focus,
+.end__price input:focus {
+    border: 0.1px solid #FF680A;
+}
+
+.filter__price__choose button {
+    width: 52px;
+    height: 36px;
+    border: none;
+    color: white;
+    background: #FF680A;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.filter__price__choose button:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    opacity: .8;
+}
+
+.filter__price__slider {
+    margin-top: 10px;
+    padding: 12px 0;
+}
+
+.noUi-target {
+    background: none;
+    border: none;
+    border-radius: 100px;
+    box-shadow: none;
+    height: 26px;
+    cursor: pointer;
+}
+
+.noUi-base {
+    background: #e9e7e7;
+}
+
+.noUi-connect {
+    background: #FF680A;
+    cursor: pointer;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+    display: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 12px;
+    height: 12px;
+    right: -6px;
+    top: -6px;
+    box-shadow: none;
+    border-radius: 100%;
+    background: #FF680A;
+    border: none;
+    cursor: pointer;
+}
+
+.noUi-handle:hover, .noUi-handle:active {
+    width: 24px;
+    height: 24px;
+    right: -12px;
+    top: -12px;
 }
