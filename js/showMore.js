@@ -23,8 +23,6 @@ function showMore(hidenBlock, unhiddenBlock, open, close, more__SVG, mostObject)
     var closer = document.getElementById(close);
     var svgElement = document.getElementById(more__SVG);
 
-    console.log(show__more);
-
     for (var i = 0; i < more.length; i++) {
         more[i].addEventListener('click', function () {
             var hidden = this.parentNode.querySelectorAll(hidenBlock);

@@ -1124,12 +1124,13 @@ element.style {
 
 .sorting p {
     color: #3B6D9A;
-    text-decoration: underline;
+    border-bottom: 1px #3B6D9A dashed;
 }
 
 .sorting__filter p:hover {
     transition: .3s;
     color: #FF680A;
+    border-bottom: 1px #FF680A dashed;
 }
 
 .catalog__page .container {
@@ -1150,7 +1151,7 @@ element.style {
     font-size: 12px;
     border-radius: 10px;
     position: absolute;
-    top: 100%;
+    top: -100px;
     right: calc(100% - 24px);
 }
 
@@ -1175,6 +1176,10 @@ element.style {
 .sorting__list ul {
     padding: 0;
     margin: 0;
+}
+
+.sorting__menu .sorting__svg {
+    transition: .3s;
 }
 
 
@@ -1406,4 +1411,26 @@ element.style {
 
 .more__SVG {
     transition: .3s;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.sorting__list {
+    animation: sorting__list__anim 0.3s linear forwards;
+    display: none;
+}
+
+@keyframes sorting__list__anim {
+    0% {
+        top: 50px;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.sorting__filter p,
+.sorting__menu .sorting__svg {
+    cursor: pointer;
 }
