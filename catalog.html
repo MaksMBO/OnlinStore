@@ -468,18 +468,10 @@
                             </ul>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
-
 
     <section class="catalog__page">
         <div class="container">
@@ -493,49 +485,50 @@
                     <span class="catalog__filter__title">Фільтри</span>
                 </div>
 
-                <div class="filter__title d-flex justify-content-between align-items-center">
+                <div class="filter__title d-flex justify-content-between align-items-center" id="price__filter__title">
                     <span>Ціна</span>
-                    <svg viewBox="0 0 24 24" fill="#515151">
+                    <svg viewBox="0 0 24 24" fill="#515151" id="price__filter__svg">
                         <path
                             d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
                         </path>
                     </svg>
                 </div>
 
-                <div class="filter__price__choose">
-                    <!-- <form> -->
-                    <div class="d-flex justify-content-between align-items-center form">
-                        <div class="start__price">
-                            <input type="number" id="price__start">
+                <div id="price__filter__content">
+                    <div class="filter__price__choose">
+                        <!-- <form> -->
+                        <div class="d-flex justify-content-between align-items-center form">
+                            <div class="start__price">
+                                <input type="number" id="price__start">
+                            </div>
+
+                            <div>-</div>
+
+                            <div class="end__price">
+                                <input type="number" id="price__end">
+                            </div>
+
+                            <button>ОК</button>
                         </div>
-
-                        <div>-</div>
-
-                        <div class="end__price">
-                            <input type="number" id="price__end">
-                        </div>
-
-                        <button>ОК</button>
+                        <div class="filter__price__slider" id="range__slider"></div>
+                        <!-- </form> -->
                     </div>
-
-                    <div class="filter__price__slider" id="range__slider"></div>
-
-                    <!-- </form> -->
                 </div>
 
-                <div>
-                    <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Бренд</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <hr>
 
-                    <div class="d-flex flex-column justify-content-center checkbox__brands">
+                <div class="filter__title d-flex justify-content-between align-items-center" id="brands__filter__title">
+                    <span>Бренд</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="brands__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
+
+                <div id="brands__filter__content">
+                    <div class="filter__content flex-column justify-content-center checkbox__brands">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="Apple-mobile" name="Apple-mobile"
                                 value="yes">
@@ -598,18 +591,21 @@
                             </path>
                         </svg>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Об'єм вбудованої пам'яті</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="memoryMobile__filter__title">
+                    <span>Об'єм вбудованої пам'яті</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="memoryMobile__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="memoryMobile__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__builtIn__memoryMobile">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="32gig-mobile" name="32gig-mobile"
@@ -653,18 +649,21 @@
                             </path>
                         </svg>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Об'єм оперативної пам'яті</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="RAMmobile__filter__title">
+                    <span>Об'єм оперативної пам'яті</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="RAMmobile__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="RAMmobile__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__RAMmobile">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="2gig-RAMmobile" name="2gig-RAMmobile"
@@ -718,18 +717,21 @@
                             </path>
                         </svg>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Об'єм оперативної пам'яті</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="screenType__mobile__filter__title">
+                    <span>Об'єм оперативної пам'яті</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="screenType__mobile__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="screenType__mobile__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__screenType__mobile">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="TFT" name="TFT" value="yes">
@@ -787,18 +789,21 @@
                             </path>
                         </svg>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Основна камера, Мп</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="main__camera__filter__title">
+                    <span>Основна камера, Мп</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="main__camera__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="main__camera__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__main__camera">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="to_10" name="to_10" value="yes">
@@ -819,19 +824,22 @@
                             <label for="from_20.1">Від 20,1 Мп</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Фронтальна камера, Мп</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="front__camera__filter__title">
+                    <span>Фронтальна камера, Мп</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="front__camera__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
-                    <div class="d-flex flex-column justify-content-center checkbox__main__camera">
+                <div id="front__camera__filter__content">
+                    <div class="d-flex flex-column justify-content-center checkbox__front__camera">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="from_2.1_to_8" name="from_2.1_to_8"
                                 value="yes">
@@ -847,19 +855,22 @@
                             <label for="from_16.1">Від 16,1 Мп</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Ємність аккумулятора</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="battery__filter__title">
+                    <span>Ємність аккумулятора</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="battery__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
-                    <div class="d-flex flex-column justify-content-center checkbox__main__camera">
+                <div id="battery__filter__content">
+                    <div class="d-flex flex-column justify-content-center checkbox__battery">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="to_2499" name="to_2499" value="yes">
                             <label for="to_2499">До 2499 мАг</label>
@@ -880,17 +891,21 @@
                         </div>
                     </div>
 
-                    <hr>
+                </div>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Процесор</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <hr>
 
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="mobile__processor__filter__title">
+                    <span>Процесор</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="mobile__processor__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
+
+                <div id="mobile__processor__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__mobile__processor">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="Apple_processor" name="Apple_processor"
@@ -939,18 +954,21 @@
                             </path>
                         </svg>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Біометричний захист</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="blocking__filter__title">
+                    <span>Біометричний захист</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="blocking__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="blocking__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__blocking">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="fingerprints" name="fingerprints"
@@ -972,18 +990,20 @@
                             <label for="missing__blocking">Відсутній</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>NFC</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center" id="NFC__filter__title">
+                    <span>NFC</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="NFC__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="NFC__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__NFC">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="YesNFC" name="YesNFC" value="yes">
@@ -994,18 +1014,21 @@
                             <label for="NoNFC">Ні</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Захист від вологи</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="protectionWater__filter__title">
+                    <span>Захист від вологи</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="protectionWater__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="protectionWater__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__protectionWater">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="YesProtectionWater"
@@ -1018,18 +1041,21 @@
                             <label for="NoProtectionWater">Ні</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Роздільна здатність екрану</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="screen__resolution__filter__title">
+                    <span>Роздільна здатність екрану</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="screen__resolution__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="screen__resolution__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__screen__resolution">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="HD+" name="HD+" value="yes">
@@ -1079,18 +1105,21 @@
                             </path>
                         </svg>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Розмір екрану</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="screen__size__filter__title">
+                    <span>Розмір екрану</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="screen__size__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="screen__size__filter__content">
                     <div class="d-flex flex-column justify-content-center checkbox__screen__size">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="frameless_screen" name="frameless_screen"
@@ -1113,18 +1142,20 @@
                             <label for="ScreenFrom5.5">Фаблет від 5,5"</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>5G</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center" id="5G__filter__title">
+                    <span>5G</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="5G__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="5G__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__5G">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="Yes5G" name="Yes5G" value="yes">
@@ -1135,18 +1166,21 @@
                             <label for="No5G">Ні</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Стереодинаміки</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="stereo__speakers__filter__title">
+                    <span>Стереодинаміки</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="stereo__speakers__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="stereo__speakers__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__stereo__speakers">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="Yes__stereo__speakers"
@@ -1159,18 +1193,21 @@
                             <label for="No__stereo__speakers">Ні</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Кількість модулів основної камери</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="number__cameras__filter__title">
+                    <span>Кількість модулів основної камери</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="number__cameras__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="number__cameras__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__number__cameras">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="1cameras" name="1cameras" value="yes">
@@ -1189,18 +1226,21 @@
                             <label for="4+cameras">4+</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Стандарт Bluetooth</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="bluetooth__filter__title">
+                    <span>Стандарт Bluetooth</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="bluetooth__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="bluetooth__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__bluetooth">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="4bluetooth" name="4bluetooth"
@@ -1223,18 +1263,21 @@
                             <label for="52bluetooth">5.2</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Функція бездротової зарядки</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="wireless__charger__filter__title">
+                    <span>Функція бездротової зарядки</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="wireless__charger__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="wireless__charger__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__wireless__charger">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="Yes__wireless__charger"
@@ -1247,18 +1290,21 @@
                             <label for="No__wireless__charger">Ні</label>
                         </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="filter__title d-flex justify-content-between align-items-center">
-                        <span>Функція швидкої зарядки</span>
-                        <svg viewBox="0 0 24 24" fill="#515151">
-                            <path
-                                d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="filter__title d-flex justify-content-between align-items-center"
+                    id="fast__charging__filter__title">
+                    <span>Функція швидкої зарядки</span>
+                    <svg viewBox="0 0 24 24" fill="#515151" id="fast__charging__filter__svg">
+                        <path
+                            d="M17.2946 9.29462C16.9053 8.90534 16.2743 8.905 15.8846 9.29385L12 13.17L8.11538 9.29385C7.72569 8.905 7.09466 8.90534 6.70538 9.29462C6.31581 9.68419 6.31581 10.3158 6.70538 10.7054L12 16L17.2946 10.7054C17.6842 10.3158 17.6842 9.68419 17.2946 9.29462Z">
+                        </path>
+                    </svg>
+                </div>
 
+                <div id="fast__charging__filter__content">
                     <div class="d-flex flex-column justify-content-between checkbox__fast__charging">
                         <div class="box-always">
                             <input type="checkbox" class="custom-checkbox" id="Yes__fast__charging"
@@ -1276,7 +1322,8 @@
 
 
 
-            
+
+
             <div class="catalog__product">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
@@ -1284,7 +1331,7 @@
                             <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                             <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                                 Console</a>
-    
+
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
                                 <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
                                         alt="UAN"></span>
@@ -1298,18 +1345,18 @@
                             <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
                                 <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
                             </button>
-    
+
                         </div>
                     </div>
-    
-    
-    
+
+
+
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="catalog__col d-flex  flex-column position-relative">
                             <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                             <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                                 Console</a>
-    
+
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
                                 <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
                                         alt="UAN"></span>
@@ -1323,29 +1370,7 @@
                             <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
                                 <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
                             </button>
-    
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                        <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
-    
-                            <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
-                                        alt="UAN"></span>
-                                <button class="border-0 button__catalog">
-                                    <img src="./image/svg/productTile/division.svg" alt="catalog__division">
-                                </button>
-                                <button class="border-0 button__catalog">
-                                    <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
-                                </button>
-                            </div>
-                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
-                                <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
-                            </button>
-    
+
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
@@ -1353,7 +1378,7 @@
                             <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                             <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                                 Console</a>
-    
+
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
                                 <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
                                         alt="UAN"></span>
@@ -1367,7 +1392,7 @@
                             <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
                                 <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
                             </button>
-    
+
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
@@ -1375,7 +1400,7 @@
                             <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                             <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                                 Console</a>
-    
+
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
                                 <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
                                         alt="UAN"></span>
@@ -1389,7 +1414,7 @@
                             <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
                                 <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
                             </button>
-    
+
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
@@ -1397,7 +1422,7 @@
                             <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
                             <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
                                 Console</a>
-    
+
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
                                 <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
                                         alt="UAN"></span>
@@ -1411,14 +1436,35 @@
                             <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
                                 <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
                             </button>
-    
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="catalog__col d-flex  flex-column position-relative">
+                            <img src="./image/temp/pngwing 6.jpg" alt="catalog__photo" class="catalog__img">
+                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
+                                Console</a>
+
+                            <div class="d-flex catalog__buy justify-content-end align-items-center">
+                                <span class="catalog__price">11&nbsp999 <img src="./image/svg/productTile/UAN.svg"
+                                        alt="UAN"></span>
+                                <button class="border-0 button__catalog">
+                                    <img src="./image/svg/productTile/division.svg" alt="catalog__division">
+                                </button>
+                                <button class="border-0 button__catalog">
+                                    <img src="./image/svg/productTile/basket.svg" alt="catalog__basket">
+                                </button>
+                            </div>
+                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
+                                <img src="./image/svg/productTile/Heart_Icon_Deselected.svg" alt="like">
+                            </button>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </body>
 
 
@@ -1429,7 +1475,6 @@
 <script src="./js/nouislider.min.js"></script>
 <script src="./js/slider__catalog.js"></script>
 <script src="./js/showMore.js"></script>
-<!-- <script src="./js/catalog.js"></script> -->
 </body>
 
 </html>

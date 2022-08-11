@@ -6,7 +6,6 @@
     background: rgba(197, 197, 199, 0.2);
 }
 
-
 .header {
     height: 56px;
     background: #3c3c3c;
@@ -1209,14 +1208,15 @@ element.style {
     padding: 10px 0;
     transition: .3s;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .filter__title span {
-    transition: .3s;
+    transition: .15s;
 }
 
 .filter__title svg {
-    transition: .3s;
+    transition: .15s;
 }
 
 .filter__title:hover,
@@ -1253,6 +1253,10 @@ element.style {
 .start__price input:focus,
 .end__price input:focus {
     border: 0.1px solid #FF680A;
+}
+
+.filter__price__choose {
+    display: block;
 }
 
 .filter__price__choose button {
@@ -1316,6 +1320,10 @@ element.style {
     height: 24px;
     right: -12px;
     top: -12px;
+}
+
+.filter__content {
+    display: flex;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------- */
@@ -1443,3 +1451,10 @@ element.style {
 .catalog__product .col-xl-3 .catalog__name {
     font-size: 14px;
 }
+
+.poshelNa {
+    display: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+

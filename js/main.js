@@ -42,6 +42,8 @@ window.onclick = function (event) {
     document.getElementById("sorting__list").style.display = "block";
     document.getElementById('sorting__svg').style.transform = "rotate(180deg)";
   }
+
+  
 }
 
 let buttonCatalog = document.querySelector("button.dropbtn");
