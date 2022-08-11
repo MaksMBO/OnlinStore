@@ -1197,8 +1197,25 @@ element.style {
     margin-left: 16px;
 }
 
-.filter__price__title {
+.filter__title {
+    color: #3B6D9A;
     padding: 10px 0;
+    transition: .3s;
+    font-size: 14px;
+}
+
+.filter__title span {
+    transition: .3s;
+}
+
+.filter__title svg {
+    transition: .3s;
+}
+
+.filter__title:hover,
+.filter__title:hover svg {
+    color: #FF680A;
+    fill: #FF680A;
 }
 
 .start__price,
@@ -1304,9 +1321,6 @@ element.style {
 .box,
 .box-always {
     margin: 1px;
-    /* width: 20px;
-    height: 20px;
-    background-color: orange; */
     height: 36px;
 }
 
@@ -1326,6 +1340,8 @@ element.style {
     align-items: center;
     user-select: none;
     width: 100%;
+    font-size: 14px;
+    height: 100%;
 }
 
 .custom-checkbox+label:hover {
@@ -1349,7 +1365,6 @@ element.style {
     width: 18px;
     height: 18px;
     background: white;
-    font-size: 14px;
 }
 
 .custom-checkbox:checked+label::before {
@@ -1371,12 +1386,24 @@ element.style {
     font-size: 12px;
     border-bottom: 1px #3B6D9A dashed;
     padding: 0;
+    transition: .3s;
 }
+
+.more:hover .more__button,
+.more:hover .more__SVG {
+    color: #FF680A;
+    fill: #FF680A;
+}
+
+.more:hover .more__button {
+    border-bottom: 1px #FF680A dashed;
+}
+
 
 .more__button .close {
     display: none;
 }
 
-#more__SVG {
+.more__SVG {
     transition: .3s;
 }
