@@ -31,18 +31,17 @@ window.onclick = function (event) {
     document.getElementById("catalog__mobile__all").classList.remove("catalog__mobile__all-active");
   }
 
-  if (document.getElementById("sorting__list").style.display === "block" && !event.target.matches('.sorting__list') 
-    && !event.target.matches('.sorting__list ul') && !event.target.matches('.sorting__list ul a') && 
+  if (document.getElementById("sorting__list").style.display === "block" && !event.target.matches('.sorting__list')
+    && !event.target.matches('.sorting__list ul') && !event.target.matches('.sorting__list ul a') &&
     !event.target.matches('.sorting__list ul a li')) {
-        // document.getElementById("sorting__list").style.animation = "sorting__list__anim2 0.3s linear forwards"
-        document.getElementById("sorting__list").style.display = "none";
-        document.getElementById('sorting__svg').style.transform = "rotate(0)";
-    }
+    document.getElementById("sorting__list").style.display = "none";
+    document.getElementById('sorting__svg').style.transform = "rotate(0)";
+  }
 
-    else if (event.target.matches('.sorting__filter p') || event.target.matches('.sorting__menu .sorting__svg')) {
-        document.getElementById("sorting__list").style.display = "block";
-        document.getElementById('sorting__svg').style.transform = "rotate(180deg)";
-    }
+  else if (event.target.matches('.sorting__filter p') || event.target.matches('.sorting__menu .sorting__svg')) {
+    document.getElementById("sorting__list").style.display = "block";
+    document.getElementById('sorting__svg').style.transform = "rotate(180deg)";
+  }
 }
 
 let buttonCatalog = document.querySelector("button.dropbtn");
