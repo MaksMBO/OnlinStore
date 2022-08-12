@@ -81,6 +81,4 @@ function closeTitle(titleId, condentId, svgImage) {
         content.classList.toggle("poshelNa");
         thisSvg.style.transform === "rotate(180deg)" ? thisSvg.style.transform = "rotate(0)" : thisSvg.style.transform = "rotate(180deg)";
     });
-
-
 }
