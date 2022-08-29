@@ -15,5 +15,13 @@ $(document).ready(function () {
         asNavFor: ".slider_nav",
         draggable: false,
         waitForAnimate: false,
-    })
+    });
+
+    $('.slideri').slick({
+        dots: true,
+        speed: 600,
+        easing: 'ease',
+        draggable: false,
+        waitForAnimate: false,
+    });
 });
