@@ -6,6 +6,19 @@
     background: rgba(197, 197, 199, 0.2);
 }
 
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
 .header {
     height: 56px;
     background: #3c3c3c;
@@ -363,6 +376,31 @@
     font-size: 28px;
 }
 
+@media (max-width: 767.5px) {
+    .catalog__mobile__all {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    .catalog__mobile .row {
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: start;
+    }
+
+    .catalog__mobile .row .col-6 {
+        max-width: none;
+        padding: 5px 5px;
+    }
+
+    .catalog__mobile__top {
+        padding: 0 5px;
+    }
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .login {
@@ -589,6 +627,10 @@
 
 .brands ul {
     padding: 0;
+}
+
+.brands__link {
+    cursor: pointer;
 }
 
 .brands__link:not(:last-child) {
@@ -827,7 +869,7 @@ img[alt="UAN"] {
 /* INFO ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .navigation_links {
-    margin-top: 81px;
+    margin-top: 81px !important;
     padding-left: 0;
     width: auto;
     overflow-x: auto;
@@ -852,7 +894,7 @@ img[alt="UAN"] {
 
 @media (max-width: 991.5px) {
     .navigation_links {
-        margin-top: 116px;
+        margin-top: 116px !important;
     }
 
     .catalog__navigation {
@@ -1480,7 +1522,7 @@ textarea {
     }
 
     .navigation_links {
-        padding: 0px 12px 0px;
+        padding: 0px 12px 0px !important;
     }
 }
 
@@ -1504,6 +1546,7 @@ textarea {
 
 .info-page {
     display: none;
+    margin-bottom: 16px;
 }
 
 @media(max-width: 790px) {
@@ -1666,8 +1709,9 @@ textarea {
 
     .navigation_links {
         margin-bottom: 0px;
-        margin-top: 0px;
-    }
+        /* margin-top: 0px; */
+    } 
+
 
     .container-0-2-289 {
         padding: 24px 16px;
@@ -2289,5 +2333,249 @@ textarea {
     100% {
         left: 0px;
         opacity: 1;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+.comparison .container {
+    background-color: white;
+    border-radius: 22px;
+    padding: 24px;
+}
+
+.comparison .title__page {
+    padding-bottom: 10px;
+}
+
+.comparison .title__page h2 {
+    margin: 0;
+}
+
+.companies__number {
+    font-weight: 500;
+    font-size: 12px;
+    color: #999999;
+}
+
+.comparison .description-0-2-417 {
+    margin: 0;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.comparison .able {
+    padding: 0 10px;
+}
+
+.comparison .description-0-2-417 {
+    padding: 8px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.comparison__characteristics {
+    display: block;
+    width: 23%;
+    min-width: 280px;
+}
+
+.comparison__product {
+    width: calc(100% - 280px);
+    min-height: 180px;
+}
+
+.comparison__characteristics__btn {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #3B6D9A;
+}
+
+.comparison__characteristics h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 10px 0 0;
+}
+
+.comparison__choice {
+    color: #3B6D9A;
+    border-bottom: 1px #3B6D9A dashed;
+    cursor: pointer;
+}
+
+.comparison__choice:hover {
+    transition: .3s;
+    color: #FF680A;
+    border-bottom: 1px #FF680A dashed;
+}
+
+.comparison__svg {
+    width: 20px;
+    height: 20px;
+}
+
+.comparison__sorting__menu {
+    position: relative;
+    margin-top: 15px;
+}
+
+.comparison__sorting {
+    background: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 180px;
+    position: absolute;
+    top: 25px;
+    animation: comparison__sorting 0.3s linear forwards;
+    display: none;
+}
+
+@keyframes comparison__sorting {
+    0% {
+        top: 70px;
+    }
+
+    100% {
+        top: 25px;
+    }
+}
+
+.comparison__sorting li {
+    padding: 5px 15px;
+    color: #3B6D9A;
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+.comparison__product {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.first__product,
+.another__products__item {
+    padding: 8px 45px;
+}
+
+.another__products {
+    min-width: 0;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+}
+
+.another__products::-webkit-scrollbar {
+    display: none;
+}
+
+.comparison__product .catalog__img {
+    position: relative;
+}
+
+.catalog__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comparison__info {
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 1400px) {
+    .another__products .catalog__img {
+        width: 237px;
+    }
+}
+
+@media (min-width: 1200px) {
+    @media (max-width: 1399.5px) {
+        .another__products .catalog__img {
+            width: 180px;
+        }
+    }
+
+}
+
+@media (max-width: 1199.5px) {
+    .catalog__buy {
+        display: block;
+    }
+
+    .comparison__product .catalog__img {
+        width: 120px;
+    }
+
+    .catalog__buy {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 991.5px) {
+    .comparison__characteristics {
+        display: none;
+    }
+
+    .another__products {
+        width: 210%;
+    }
+}
+
+@media (max-width: 767.5px) {
+    .another__products {
+        width: 210px;
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 490px) {
+    .another__products {
+        width: 170px;
+    }
+
+    .first__product,
+    .another__products__item {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 428px) {
+    .another__products {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 388px) {
+    .another__products {
+        margin-left: 20px;
+        width: 150px;
+    }
+
+    .first__product,
+    .another__products__item {
+        padding: 8px 15px;
+    }
+
+    .comparison__info {
+        flex-direction: column;
+        align-items: start;
     }
 }

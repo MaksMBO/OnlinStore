@@ -44,3 +44,14 @@ export function catalogOnclick() {
         document.getElementById("catalog__filter").style.display = "none";
     }
 }
+
+export function sortingOnclick() {
+    if (document.getElementById("comparison__sorting").style.display === "block" &&
+        !event.target.matches('.comparison__sorting') && !event.target.matches('.comparison__sorting ul') &&
+        !event.target.matches('.comparison__sorting a') && !event.target.matches('.comparison__sorting li')) {
+        document.getElementById("comparison__sorting").style.display = "none";
+    }
+    else if (event.target.matches('.comparison__choice') || event.target.matches('.comparison__svg')) {
+        document.getElementById("comparison__sorting").style.display = "block";
+    }
+}

@@ -1,3 +1,5 @@
+import scroll from "./scrollMouse.js"
+
 let buttonAddtoWishlist = document.querySelector("button.add-favorite")
 let buttonAddtoCompare = document.querySelector("button.add-compare")
 buttonAddtoWishlist.addEventListener("mouseenter", function () {
@@ -45,3 +47,5 @@ $('.info').hover(
         $('#modal').remove();
     });
 
+window.onload = scroll(".tabs-0-2-366");
+window.onload = scroll(".navigation_links");

@@ -1,8 +1,8 @@
-window.onload = scroll(".tabs-0-2-366");
+// window.onload = scroll(".tabs-0-2-366");
 
 
 
-function scroll(className) {
+export default function scroll(className) {
     var scr = $(className);
     scr.mousedown(function () {
         var startX = this.scrollLeft + event.pageX;
