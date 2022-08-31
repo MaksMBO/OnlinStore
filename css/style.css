@@ -1056,10 +1056,8 @@ element.style {
 
 .current-image {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 48px 1fr;
 }
 
 .full-image {
@@ -1710,7 +1708,7 @@ textarea {
     .navigation_links {
         margin-bottom: 0px;
         /* margin-top: 0px; */
-    } 
+    }
 
 
     .container-0-2-289 {
