@@ -6,8 +6,9 @@ $(document).ready(function () {
         arrows: false,
         adaptiveHeight: true,
         slidesToShow: 7,
-        waitForAnimate: true,
         asNavFor: ".slider_nav_big",
+        draggable: false,
+        useTransform: false,
     });
 
     $('.slider_nav_big').slick({
