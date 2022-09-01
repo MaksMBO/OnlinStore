@@ -26,4 +26,12 @@ $(document).ready(function () {
         draggable: false,
         waitForAnimate: false,
     });
+
+    $('.sliderii').slick({
+        dots: true,
+        speed: 600,
+        easing: 'ease',
+        draggable: false,
+        waitForAnimate: false,
+    });
 });

@@ -885,7 +885,8 @@ img[alt="UAN"] {
 }
 
 .catalog__navigation ul {
-    padding: 0;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
 }
 
 .catalog__navigation .container {
@@ -1702,7 +1703,7 @@ textarea {
     }
 
     .navigation {
-        margin-top: 152px;
+        /* margin-top: 152px; */
     }
 
     .navigation_links {
@@ -1829,6 +1830,131 @@ textarea {
     transition: .3s;
     color: #FF680A;
     border-bottom: 1px #FF680A dashed;
+}
+
+.showMoreSlider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: fixed;
+    background: #FFFFFF;
+    display: block;
+    opacity: 0;
+}
+
+.sliderii .slick-track {
+    display: flex;
+}
+
+.sliderii .slider__item {
+    height: 65vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderii .slider__item img {
+    height: 100%;
+    width: auto;
+}
+
+.sliderii .slick-list {
+    overflow: hidden;
+}
+
+.sliderii .slick-arrow.slick-prev {
+    left: 0;
+    background: url("../image/png/arrows/left-chevron.png") 8px 11px no-repeat;
+    margin-left: 20px;
+}
+
+/* Стрелка вправо */
+.sliderii .slick-arrow.slick-next {
+    right: 0;
+    background: url("../image/png/arrows/right-chevron.png") 12px 11px no-repeat;
+    margin-right: 20px;
+}
+.sliderii .slick-arrow {
+    position: absolute;
+    top: 35%;
+    z-index: 10;
+    font-size: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 0px 3px 4px rgba(0, 8, 29, 0.05), 0px 2px 4px rgba(0, 8, 29, 0.06), 0px 1px 5px rgba(0, 8, 29, 0.08)
+}
+
+@keyframes wipe {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.sliderii .slick-arrow.slick-next:active,
+.sliderii .slick-arrow.slick-prev:active {
+    animation: wipe .3s cubic-bezier(.2, .6, .8, .4) forwards;
+}
+
+.sliderii {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.sliderii .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 85%;
+    margin: 0 auto !important;
+}
+
+.sliderii .slick-dots li {
+    list-style: none;
+    width: 100%;
+}
+
+.sliderii .slick-dots li:not(:last-child) {
+    margin-right: 25px;
+}
+
+/* Активная точка */
+.sliderii .slick-dots li.slick-active button {
+    background: #000000;
+}
+
+/* Элемент точки */
+.sliderii .slick-dots li button {
+    font-size: 0;
+    width: 100%;
+    height: 2px;
+    background: #D9D9D9;
+    border: 0;
+}
+
+.showMoreSlider .ShowMoreSVG {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    margin: 20px;   
+    transition: .3s;
+    cursor: pointer;
+}
+
+.showMoreSlider .ShowMoreSVG:hover {
+    fill: #FF680A;
+    transition: .3s;
 }
 
 

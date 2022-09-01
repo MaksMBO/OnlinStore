@@ -298,6 +298,14 @@
                     <input type="text" placeholder="Пошук" class="header__input">
                 </div>
 
+                <div class="header__user d-flex align-items-center">
+
+                    <button class="header__user__button d-flex align-items-center" onclick="showlogin()">
+                        <img src="./image/svg/header/User.svg" alt="user">
+                        <span class="text-white text-decoration-none header__user__text">Увійти</span>
+                    </button>
+                </div>
+
                 <div class="login" id="login">
                     <div class="login__menu" id="login__menu">
                         <span class="login__title">Вхід</span>
@@ -391,31 +399,6 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
-        </div>
-        <div class="mobile-aboba">
-            <div class="tabs-wrapper-0-2-385 tabs-0-2-366 line-maker position-relative">
-                <div class="container-0-2-99">
-                    <div class="dislay-flex align-items-center flex-row tabs tabs-bar-0-2-378 right-scroll">
-                        <a href="" draggable="false" class="active-tab-0-2-380" onclick="clickonelement(this)">Все про
-                            товар</a>
-                        <a href="" draggable="false" class="active-tab-0-2-381"
-                            onclick="clickonelement(this)">Характеристики</a>
-                        <a href="" draggable="false" class="active-tab-0-2-381"
-                            onclick="clickonelement(this)">Аксесуари</a>
-                        <a href="" draggable="false" class="active-tab-0-2-381" onclick="clickonelement(this)">Фото</a>
-                        <a href="" draggable="false" class="active-tab-0-2-381 last"
-                            onclick="clickonelement(this)"><span>Відгуки</span></a>
-                    </div>
-                    <!-- style="transition: all 0.3s ease 0s; width: 155.11px; left: 17.81px;"> -->
-                    <!-- style="transition: all 0.3s ease 0s; width: 176.74px; left: 177.8px;"> -->
-                    <!-- style="transition: all 0.3s ease 0s; width: 123px; left: 358.54px;"> -->
-                    <!-- style="transition: all 0.3s ease 0s; width: 77.13px; left: 485.54px;"> -->
-                    <!-- style="transition: all 0.3s ease 0s; width: 101.28px; left: 566.7px;"> -->
-                    <div class="active-bar-0-2-107" id="id1"
-                        style="transition: all 0.3s ease 0s; width: 102px; left: 566.8px;">
-                    </div>
-                </div>
             </div>
         </div>
     </header>
@@ -588,8 +571,40 @@
                                         </div>
                                     </div>
                                     <span class="spanMore">
-                                        <a class="showMore" href="">Ще 1</a>
+                                        <a class="showMore" id="showMore" href="#!">Ще 1</a>
                                     </span>
+
+                                    <div class="showMoreSlider" id="showMoreSlider">
+                                        <div class="sliderii">
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox1.jpg" src="" alt="info-page">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox2.jpg" src="" alt="info-page">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox3.jpg" src="" alt="info-page">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox4.jpg" src="" alt="info-page">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox5.jpg" src="" alt="info-page">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox6.jpg" src="" alt="info-page">
+                                            </div>
+                                            <div class="slider__item">
+                                                <img data-lazy="./image/temp/xbox7.jpg" src="" alt="info-page">
+                                            </div>
+                                        </div>
+
+                                        <svg viewBox="0 0 24 24" fill="#7c7c7c" class="ShowMoreSVG">
+                                            <path
+                                                d="M10.5858 11.9999L4.66667 6.08079C4.27615 5.69027 4.27615 5.0571 4.66667 4.66658C5.0572 4.27606 5.69036 4.27605 6.08088 4.66658L12 10.5857L17.9191 4.66658C18.3096 4.27606 18.9428 4.27606 19.3333 4.66658C19.7239 5.0571 19.7239 5.69027 19.3333 6.08079L13.4142 11.9999L19.3333 17.919C19.7239 18.3096 19.7239 18.9427 19.3333 19.3332C18.9428 19.7238 18.3096 19.7238 17.9191 19.3332L12 13.4141L6.08088 19.3332C5.69036 19.7238 5.0572 19.7238 4.66667 19.3332C4.27615 18.9427 4.27615 18.3096 4.66667 17.919L10.5858 11.9999Z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
 
 
@@ -954,8 +969,6 @@
             </div>
     </section>
 
-
-</body>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
@@ -965,10 +978,10 @@
 <script type="module" src="./js/mainOnclick.js"></script>
 <script src="./js/slick.min.js"></script>
 <script src="./js/slider__info.js"></script>
-<!-- <script src="./js/slider__product.js"></script> -->
 <script src="./js/zoomInfo.js"></script>
 <script type="module" src="./js/info.js"></script>
-<!-- <script src="./js/scrollMouse.js"></script> -->
+
+</body>
 
 
 </html>

@@ -1,4 +1,11 @@
 import scroll from "./scrollMouse.js"
+import showSlider from "./onclichFunction.js"
+import {mainOnclick} from "./onclichFunction.js"
+
+window.onclick = function (event) {
+    showSlider();
+    mainOnclick();
+  }
 
 let buttonAddtoWishlist = document.querySelector("button.add-favorite")
 let buttonAddtoCompare = document.querySelector("button.add-compare")
@@ -49,3 +56,4 @@ $('.info').hover(
 
 window.onload = scroll(".tabs-0-2-366");
 window.onload = scroll(".navigation_links");
+

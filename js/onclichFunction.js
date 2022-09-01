@@ -55,3 +55,17 @@ export function sortingOnclick() {
         document.getElementById("comparison__sorting").style.display = "block";
     }
 }
+
+export default function showSlider() {
+    if (event.target.matches('.showMore')) {
+        document.body.style.overflow = 'hidden';
+        document.getElementById("showMoreSlider").style.zIndex = 401;
+        document.getElementById("showMoreSlider").style.opacity = 1;
+    }
+
+    if(event.target.matches('.ShowMoreSVG') || event.target.matches('.ShowMoreSVG path')) {
+        document.body.style.overflow = 'auto';
+        document.getElementById("showMoreSlider").style.zIndex = -1;
+        document.getElementById("showMoreSlider").style.opacity = 0;
+    }
+}
