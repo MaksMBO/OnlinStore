@@ -5,3 +5,4 @@ python-dotenv==0.21.0
 setuptools==58.1.0
 sqlparse==0.4.2
 tzdata==2022.2
+mysqlclient==2.1.1

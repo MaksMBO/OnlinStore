@@ -79,10 +79,16 @@ WSGI_APPLICATION = 'InternetShop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('NAME_BD'),
+        'USER': os.getenv('USER_BD'),
+        'PASSWORD': os.getenv('PASSWORD_BD'),
+        'HOST': os.getenv('HOST_BD'),
+        'PORT': os.getenv('PORT_BD'),
     }
 }
+
+
 
 
 # Password validation
