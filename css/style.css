@@ -1,3 +1,4 @@
+{% load static %}
 .container {
     font-family: 'Montserrat', sans-serif;
 }
@@ -794,16 +795,17 @@ img[alt="UAN"] {
 /* Стрелка влево */
 .advertising .slick-arrow.slick-prev {
     left: 0;
-    background: url("../image/svg/slider/right.svg") 0 0 no-repeat;
+    background: url(" {% static 'img/svg/slider/right.svg' %}") 0 0 no-repeat;
 }
 
 /* Стрелка вправо */
 .advertising .slick-arrow.slick-next {
     right: 0;
-    background: url("../image/svg/slider/left.svg") 0 0 no-repeat;
-    /* transition: .1s; */
+    background: url("/static/img/svg/slider/left.svg") 0 0 no-repeat;
+    /* transition: .1s;
 
-}
+} 
+
 
 @keyframes wipe {
     0% {
