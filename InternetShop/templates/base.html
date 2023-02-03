@@ -19,6 +19,7 @@
 </head>
 
 <body class="body__background" id="body__background">
+    {% include "users_page/partials/error.html" %}
     <header class="header">
         <div class="container">
             <div class=" header__all">
@@ -110,12 +111,18 @@
                             <div class="left__menu__head">
                                 <img src="{% static 'img/svg/header/User.svg'%}" alt="user" class="">
                                 <button class="left__menu__button" onclick="showlogin()">
-                                    <span class="text-white text-decoration-none ">Увійти</span>
+                                    <span class="text-white text-decoration-none ">
+                                        {% if request.user.is_authenticated %}
+                                            {{request.user.first_name}} {{request.user.last_name}}
+                                        {% else %}
+                                            Увійти
+                                        {% endif %}
+                                    </span>
                                 </button>
-                                <span class="text-white ">/</span>
+                                <!-- <span class="text-white ">/</span>
                                 <button class="left__menu__button" onclick="showRegister()">
                                     <span class="text-white text-decoration-none ">Реєстрація</span>
-                                </button>
+                                </button> -->
                             </div>
                             <nav class="left__menu__functions ">
                                 <ul class="">
@@ -305,7 +312,13 @@
 
                     <button class="header__user__button d-flex align-items-center" onclick="showlogin()">
                         <img src="{% static 'img/svg/header/User.svg'%}" alt="user">
-                        <span class="text-white text-decoration-none header__user__text">Увійти</span>
+                        <span class="text-white text-decoration-none header__user__text">
+                            {% if request.user.is_authenticated %}
+                                {{request.user.first_name}}
+                            {% else %}
+                                Увійти
+                            {% endif %}
+                        </span>
                     </button>
                 </div>
 
@@ -598,6 +611,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'js/slick.min.js'%}"></script>
     <script src="{% static 'js/slider__main.js'%}"></script>
+    <script src="{% static 'js/hide.js'%}"></script>
 </body>
 
 </html>

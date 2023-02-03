@@ -10,17 +10,21 @@ from .forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
 
 User = get_user_model()
 
-class Home(ListView):
+class Error():
+    eroors = []
+
+class Home(Error, ListView):
 
     def get(self, request):
         user_register = UserRegistrationForm()
         user_email_login = UserEmailLogin()
         user_phone_login = UserPhoneLogin()
+        
         return render(request, 'users_page/authorization.html', context={
             'register_form': user_register, 'email_login_form': user_email_login,
-            'phone_login_form': user_phone_login})
+            'phone_login_form': user_phone_login, "errors": self.eroors})
 
-class Register(ListView):
+class Register(Error, ListView):
     
     def post(self, request, *args, **kwargs):
         register_form = UserRegistrationForm(request.POST)
@@ -29,6 +33,7 @@ class Register(ListView):
             
             email = new_user['email']
             if not User.objects.filter(email=email):
+                self.eroors = []
                 first_name = new_user['first_name']
                 last_name = new_user['last_name']
                 phone = new_user['phone'].as_e164
@@ -36,15 +41,18 @@ class Register(ListView):
 
                 user = User.objects.create(first_name=first_name, last_name=last_name, phone=phone, email=email, password=password, username=last_name+first_name)
                 user.save()
- 
+            else:
+                self.eroors.append("Користувач з таким email вже існує")
+        
         return HttpResponseRedirect(reverse('home'))
     
-class LoginPhone(ListView):
+class LoginPhone(Error, ListView):
         
     def post(self, request, *args, **kwargs):
         phone_form = UserPhoneLogin(request.POST)
         
         if phone_form.is_valid():
+            self.eroors = []
             user = phone_form.cleaned_data
             phone = user['phone']
             password = base64.b64encode(str(user['password']).encode("utf-8")).decode("utf-8")
@@ -56,12 +64,13 @@ class LoginPhone(ListView):
        
         return HttpResponseRedirect(reverse('home'))
     
-class LoginEmail(ListView):
+class LoginEmail(Error, ListView):
     
     def post(self, request):
         email_form = UserEmailLogin(request.POST)
         
         if email_form.is_valid():
+            self.eroors = []
             user = email_form.cleaned_data
             email = user['email']
             password = base64.b64encode(str(user['password']).encode("utf-8")).decode("utf-8")
