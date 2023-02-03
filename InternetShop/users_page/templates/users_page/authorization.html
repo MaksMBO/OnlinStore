@@ -5,21 +5,22 @@
     <div class="login__menu" id="login__menu">
         <span class="login__title">Вхід</span>
         <span class="login__subtitle login__number" id="login__number">Введіть свій номер
-                            телефону</span>
+            телефону</span>
         <span class="login__subtitle login__email" id="login__email">Для входу введіть свою
-                            email адресу</span>
+            email адресу</span>
         <input type="tel" class="login__input login__number" id="inp_login__number" placeholder="+380">
         <input type="email" class="login__input login__email" id="inp_login__email" placeholder="Email">
+        <input type="email" class="login__input" id="" placeholder="Пароль">
         <button class="login__next">
             Далі
         </button>
         <span class="login__else">або</span>
         <button class="login__another login__number" id="login__number-button"
-                onclick="loginDisplayNone('block', 'none')">
+            onclick="loginDisplayNone('block', 'none')">
             Увійти по email
         </button>
         <button class="login__another login__email" id="login__email-button"
-                onclick="loginDisplayNone('none', 'block')">
+            onclick="loginDisplayNone('none', 'block')">
             Увійти по телефону
         </button>
         <button class="login__link" onclick="showRegister()">Зареєструватися</button>
