@@ -442,8 +442,12 @@ a {
 .register__menu {
     width: 344px;
     height: 476px;
+    justify-content: space-around;
 }
 
+.login__menu p {
+    margin-bottom: 0px;
+}
 
 .login__title,
 .register__title {
@@ -486,6 +490,7 @@ a {
     font-weight: 500;
     font-size: 20px;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .login__menu:first-child,
@@ -1222,6 +1227,10 @@ element.style {
     cursor: pointer;
 }
 
+.phone_form p, .email_form p {
+    margin-bottom: 25px;
+}
+
 .title-0-2-430 button:hover,
 .title-0-2-430 button:focus,
 .link:hover,
@@ -1877,6 +1886,7 @@ textarea {
     background: url("/static/img/png/arrows/right-chevron.png") 12px 11px no-repeat;
     margin-right: 20px;
 }
+
 .sliderii .slick-arrow {
     position: absolute;
     top: 35%;
@@ -1947,7 +1957,7 @@ textarea {
     top: 0;
     width: 30px;
     height: 30px;
-    margin: 20px;   
+    margin: 20px;
     transition: .3s;
     cursor: pointer;
 }

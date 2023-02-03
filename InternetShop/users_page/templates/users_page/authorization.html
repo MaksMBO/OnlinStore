@@ -8,12 +8,22 @@
             телефону</span>
         <span class="login__subtitle login__email" id="login__email">Для входу введіть свою
             email адресу</span>
-        <input type="tel" class="login__input login__number" id="inp_login__number" placeholder="+380">
-        <input type="email" class="login__input login__email" id="inp_login__email" placeholder="Email">
-        <input type="email" class="login__input" id="" placeholder="Пароль">
-        <button class="login__next">
-            Далі
-        </button>
+        <form method="post" action="{% url 'login_phone' %}" class="phone_form login__number">
+            {% csrf_token %}
+            {{ phone_login_form.as_p }}
+            <button class="login__next ">
+                Далі
+            </button>
+        </form>
+
+        <form method="post" action="{% url 'login_email' %}" class="email_form login__email">
+            {% csrf_token %}
+            {{ email_login_form.as_p }}
+            <button class="login__next login__email">
+                Далі
+            </button>
+        </form>
+
         <span class="login__else">або</span>
         <button class="login__another login__number" id="login__number-button"
             onclick="loginDisplayNone('block', 'none')">
@@ -27,19 +37,15 @@
     </div>
 
     <div class="register__menu" id="register__menu">
-        <span class="register__title">Реєстрація</span>
-        <input type="text" class="register__input" placeholder="Ім'я">
-        <input type="text" class="register__input" placeholder="Прізвище">
-        <input type="text" class="register__input" placeholder="Номер телефону">
-        <input type="email" class="register__input " placeholder="Email">
-        <div class="register__password__menu">
-            <input type="password" class="register__input" placeholder="Пароль">
-            <span class="register__subtitle">Пароль повинен бути не менше 6 символів</span>
-        </div>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <span class="register__title">Реєстрація</span>
+            {{ register_form.as_p }}
 
-        <button class="register__next">
-            Далі
-        </button>
+            <button class="register__next">
+                Далі
+            </button>
+        </form>
         <button class="register__link" onclick="closeRegister()">Увійти</button>
     </div>
 </div>
