@@ -2746,6 +2746,7 @@ textarea {
 
 .error_text {
     padding: 10px 20px;
+    display: flex;
 }
 
 .error_line {

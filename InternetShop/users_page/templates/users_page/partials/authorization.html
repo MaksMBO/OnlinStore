@@ -38,11 +38,6 @@
             {% csrf_token %}
             <span class="register__title">Реєстрація</span>
             {{ register_form.as_p }}
-
-            {% for error in errors %}
-            {{ error }}
-            {% endfor %}
-
             <button class="register__next">
                 Далі
             </button>

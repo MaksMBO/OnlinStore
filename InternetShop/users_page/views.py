@@ -12,7 +12,8 @@ User = get_user_model()
 
 
 class Error():
-    eroors = []
+    errors = []
+    temp_error = []
 
 
 class Home(Error, ListView):
@@ -21,10 +22,14 @@ class Home(Error, ListView):
         user_register = UserRegistrationForm()
         user_email_login = UserEmailLogin()
         user_phone_login = UserPhoneLogin()
-
+        
+        self.temp_error.clear()
+        self.temp_error = self.errors.copy()
+        self.errors.clear()
+        
         return render(request, 'users_page/authorization.html', context={
             'register_form': user_register, 'email_login_form': user_email_login,
-            'phone_login_form': user_phone_login, "errors": self.eroors})
+            'phone_login_form': user_phone_login, "errors": self.temp_error})
 
 
 class Register(Error, ListView):
@@ -33,10 +38,10 @@ class Register(Error, ListView):
         register_form = UserRegistrationForm(request.POST)
         if register_form.is_valid():
             new_user = register_form.cleaned_data
-
+            
             email = new_user['email']
             if not User.objects.filter(email=email):
-                self.eroors = []
+                self.errors = []
                 first_name = new_user['first_name']
                 last_name = new_user['last_name']
                 phone = new_user['phone'].as_e164
@@ -47,7 +52,9 @@ class Register(Error, ListView):
                                            phone=phone, email=email, password=password, username=last_name+first_name)
                 user.save()
             else:
-                self.eroors.append("Користувач з таким email вже існує")
+                self.errors.append("Користувач з таким email вже існує")
+        else:
+            self.errors.append("Користувач з таким телефоном вже створений")
 
         return HttpResponseRedirect(reverse('home'))
 
@@ -55,10 +62,9 @@ class Register(Error, ListView):
 class LoginPhone(Error, ListView):
 
     def post(self, request, *args, **kwargs):
-        phone_form = UserPhoneLogin(request.POST)
-
+        phone_form = UserPhoneLogin(request.POST) 
+        
         if phone_form.is_valid():
-            self.eroors = []
             user = phone_form.cleaned_data
             phone = user['phone']
             password = base64.b64encode(
@@ -67,12 +73,15 @@ class LoginPhone(Error, ListView):
 
             try:
                 user_auth = User.objects.get(phone=phone, password=password)
+                self.errors = []
             except (AttributeError, User.DoesNotExist):
-                self.eroors.append("Такого користувача не існує")
+                self.errors.append("Такого користувача не існує")
 
             if user_auth is not None:
                 login(request, user_auth)
-
+        else:
+            self.errors.append("Такого користувача не існує")
+        
         return HttpResponseRedirect(reverse('home'))
 
 
@@ -80,9 +89,8 @@ class LoginEmail(Error, ListView):
 
     def post(self, request):
         email_form = UserEmailLogin(request.POST)
-
+        
         if email_form.is_valid():
-            self.eroors = []
             user = email_form.cleaned_data
             email = user['email']
             password = base64.b64encode(
@@ -91,10 +99,13 @@ class LoginEmail(Error, ListView):
 
             try:
                 user_auth = User.objects.get(email=email, password=password)
+                self.errors = []
             except (AttributeError, User.DoesNotExist):
-                self.eroors.append("Такого користувача не існує")
+                self.errors.append("Такого користувача не існує")
 
             if user_auth is not None:
                 login(request, user_auth)
+        else: 
+            self.errors.append("Такого користувача не існує")
 
         return HttpResponseRedirect(reverse('home'))
