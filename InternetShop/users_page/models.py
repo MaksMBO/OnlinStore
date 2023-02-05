@@ -12,8 +12,8 @@ class User(AbstractUser):
 
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     basket = models.ForeignKey(Basket, on_delete=models.CASCADE, blank=True, null=True)
-    like = models.ManyToManyField('catalog.Products', related_name='like', blank=True, null=True)
-    comparison = models.ManyToManyField('catalog.Products', related_name='comparison', blank=True, null=True)
+    like = models.ManyToManyField('catalog.Products', related_name='like', null=True)
+    comparison = models.ManyToManyField('catalog.Products', related_name='comparison', null=True)
 
     class Meta:
         db_table = 'user'
