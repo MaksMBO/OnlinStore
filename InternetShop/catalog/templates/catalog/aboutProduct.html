@@ -145,70 +145,25 @@ About
                             <div class="current-image">
                                 <div class="d-flex justify-content-center flex-column">
                                     <div class="slider_nav d-block">
+                                        {% for img in product.img.all %}
                                         <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox1.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
+                                            <img src="{{ img.img.url }}"
+                                                alt="img"
                                                 class="preview-image">
                                         </div>
-                                        <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox2.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="preview-image">
-                                        </div>
-                                        <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox3.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="preview-image">
-                                        </div>
-                                        <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox4.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="preview-image">
-                                        </div>
-                                        <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox5.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="preview-image">
-                                        </div>
-                                        <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox6.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="preview-image">
-                                        </div>
-
-                                        <div class="slider_nav__item">
-                                            <img src="{% static 'img/temp/xbox7.jpg'%}"
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="preview-image">
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                     <span class="spanMore">
-                                        <a class="showMore" id="showMore" href="#!">Ще 1</a>
+                                        <a class="showMore" id="showMore">Ще</a>
                                     </span>
 
                                     <div class="showMoreSlider" id="showMoreSlider">
                                         <div class="sliderii">
+                                            {% for img in product.img.all %}
                                             <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox1.jpg'%}" src="" alt="info-page">
+                                                <img data-lazy="{{ img.img.url }}" src="" alt="info-page">
                                             </div>
-                                            <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox2.jpg'%}" src="" alt="info-page">
-                                            </div>
-                                            <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox3.jpg'%}" src="" alt="info-page">
-                                            </div>
-                                            <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox4.jpg'%}" src="" alt="info-page">
-                                            </div>
-                                            <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox5.jpg'%}" src="" alt="info-page">
-                                            </div>
-                                            <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox6.jpg'%}" src="" alt="info-page">
-                                            </div>
-                                            <div class="slider__item">
-                                                <img data-lazy="{% static 'img/temp/xbox7.jpg'%}" src="" alt="info-page">
-                                            </div>
+                                            {% endfor %}
                                         </div>
 
                                         <svg viewBox="0 0 24 24" fill="#7c7c7c" class="ShowMoreSVG">
@@ -222,70 +177,18 @@ About
 
 
                                 <div class="slider_nav_big">
+                                    {% for img in product.img.all %}
                                     <div class="slider_nav__item_big">
                                         <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox1.jpg'%}" src=""
+                                            <img data-lazy="{{ img.img.url }}" src=""
                                                 alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
                                                 class="full-image">
                                             <div class="zoom__cursor"></div>
                                         </div>
                                     </div>
-
-                                    <div class="slider_nav__item_big">
-                                        <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox2.jpg'%}" src=""
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="full-image">
-                                            <div class="zoom__cursor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="slider_nav__item_big">
-                                        <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox3.jpg'%}" src=""
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="full-image">
-                                            <div class="zoom__cursor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="slider_nav__item_big">
-                                        <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox4.jpg'%}" src=""
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="full-image">
-                                            <div class="zoom__cursor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="slider_nav__item_big">
-                                        <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox5.jpg'%}" src=""
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="full-image">
-                                            <div class="zoom__cursor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="slider_nav__item_big">
-                                        <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox6.jpg'%}" src=""
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="full-image">
-                                            <div class="zoom__cursor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="slider_nav__item_big">
-                                        <div class="image__cover">
-                                            <img data-lazy="{% static 'img/temp/xbox7.jpg'%}" src=""
-                                                alt="Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console preview фото 1"
-                                                class="full-image">
-                                            <div class="zoom__cursor"></div>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
-
-
-
                             </div>
-
-
                         </div>
                     </div>
                     <div class="right-0-2-299">
@@ -293,7 +196,7 @@ About
                             <div class="containerForZoom" id="containerForZoom"></div>
                             <div class="title">
                                 <h1>
-                                    Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital Console
+                                    {{ product.title }}
                                 </h1>
                             </div>
                             <div class="rating-code d-flex align-content-center align-text-center">
@@ -348,40 +251,16 @@ About
                                     <span>Код: </span><span class="code-number">23423</span>
                                 </div>
                             </div>
-                            <!-- <span class="align-items-center description-0-2-417 descriptionGreen-0-2-418"><svg
-                                viewBox="0 0 24 24" fill="currentColor" class="icon-0-2-422 icon-0-2-31">
-                                <path
-                                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 14.17L15.88 8.29C16.27 7.9 16.91 7.9 17.3 8.29C17.69 8.68 17.69 9.31 17.3 9.7L10.71 16.29C10.32 16.68 9.69 16.68 9.3 16.29L6.71 13.7C6.32 13.31 6.32 12.68 6.71 12.29C7.1 11.9 7.73 11.9 8.12 12.29L10 14.17Z">
-                                </path>
-                            </svg>
-                            <span class="able">Є в наявності</span>
-                        </span> -->
+
                             <div class="info-page">
                                 <div class="slideri">
+                                    {% for img in product.img.all %}
                                     <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox1.jpg'%}" alt="info-page">
+                                        <img data-lazy="" src="{{ img.img.url }}" alt="info-page">
                                     </div>
-                                    <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox2.jpg'%}" alt="info-page">
-                                    </div>
-                                    <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox3.jpg'%}" alt="info-page">
-                                    </div>
-                                    <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox4.jpg'%}" alt="info-page">
-                                    </div>
-                                    <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox5.jpg'%}" alt="info-page">
-                                    </div>
-                                    <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox6.jpg'%}" alt="info-page">
-                                    </div>
-                                    <div class="slider__item">
-                                        <img data-lazy="" src="{% static 'img/temp/xbox7.jpg'%}" alt="info-page">
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
-
 
                             <span class="align-items-center description-0-2-417 descriptionRed-0-2-418"><svg
                                     viewBox="0 0 24 24" fill="currentColor" class="icon icon-0-2-177 icon-0-2-31">
@@ -397,7 +276,7 @@ About
                         </div>
                         <div class="price">
                             <span>
-                                11 999
+                                {{ product.price }}
                             </span>
                             <span class="price-sign">
                                 ₴

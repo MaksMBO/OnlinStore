@@ -1828,6 +1828,7 @@ textarea {
     color: #3B6D9A;
     border-bottom: 1px #3B6D9A dashed;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .spanMore {

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class ProductsImg(models.Model):
     img = models.FileField(upload_to='uploads/')
@@ -18,3 +19,6 @@ class Products(models.Model):
     img = models.ManyToManyField(ProductsImg)
     type = models.ForeignKey(ProductsType, on_delete=models.CASCADE)
     brand = models.ForeignKey(ProductsBrand, on_delete=models.CASCADE)
+    
+    def get_pk(self):
+        return reverse('aboutProduct', kwargs={'id': self.pk})

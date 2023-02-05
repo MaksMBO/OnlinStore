@@ -938,7 +938,7 @@ Catalog
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                         <div class="catalog__col d-flex  flex-column position-relative">
                             <img src="{{product.img.all.0.img.url}}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">{{ product.title }}</a>
+                            <a href="{{ product.get_pk }}" class="catalog__name">{{ product.title }}</a>
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
                                 <span class="catalog__price">{{ product.price }} <img src="{% static 'img/svg/productTile/UAN.svg'%}"
                                         alt="UAN" draggable="false"></span>
