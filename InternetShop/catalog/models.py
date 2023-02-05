@@ -19,6 +19,7 @@ class Products(models.Model):
     img = models.ManyToManyField(ProductsImg)
     type = models.ForeignKey(ProductsType, on_delete=models.CASCADE)
     brand = models.ForeignKey(ProductsBrand, on_delete=models.CASCADE)
+    is_available = models.BooleanField(default=False)
     
     def get_pk(self):
         return reverse('aboutProduct', kwargs={'id': self.pk})
