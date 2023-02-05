@@ -973,13 +973,13 @@ Catalog
 
             <div class="catalog__product">
                 <div class="row">
+                    {% for product in products %}
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                         <div class="catalog__col d-flex  flex-column position-relative">
                             <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
+                            <a class="catalog__name">{{ product.title }}</a>
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="{% static 'img/svg/productTile/UAN.svg'%}"
+                                <span class="catalog__price">{{ product.price }}<img src="{% static 'img/svg/productTile/UAN.svg'%}"
                                         alt="UAN" draggable="false"></span>
                                 <button class="border-0 button__catalog">
                                     <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
@@ -993,10 +993,10 @@ Catalog
                             </button>
                         </div>
                     </div>
+                    {% endfor %}
 
 
-
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                         <div class="catalog__col d-flex  flex-column position-relative">
                             <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
                             <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
@@ -1095,7 +1095,7 @@ Catalog
                                 <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

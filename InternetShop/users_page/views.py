@@ -1,4 +1,5 @@
 import base64
+from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.contrib.auth import get_user_model, login, logout
 from django.shortcuts import redirect
@@ -12,7 +13,9 @@ User = get_user_model()
 class Home(CatalogMixin, ListView):
 
     def get(self, request):
-        return self.renderPage(request, 'users_page/authorization.html')
+        context = self.renderPage()
+        return render(request, 'users_page/authorization.html', context=context)
+
 
 
 class Register(Notifications, ListView):
