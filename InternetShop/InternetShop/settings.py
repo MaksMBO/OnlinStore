@@ -110,4 +110,4 @@ STATICFILES_DIR = ( '/var/www/html/static', )
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_cdn')
 
-MEDIA_URL = '/uploads/'
+MEDIA_URL = ''
