@@ -1,8 +1,9 @@
 $(document).ready(function(){   
-    setTimeout(hideError, 10000);
+    setTimeout(hideError, 10000, "error");
+    setTimeout(hideError, 10000, "success");
 });
 
-function hideError() {
-    elem = document.getElementById("error");
+function hideError(elem_id) {
+    elem = document.getElementById(elem_id);
     elem.style.display = "none";
 }
