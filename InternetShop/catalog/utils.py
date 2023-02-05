@@ -1,11 +1,7 @@
 from django.shortcuts import render
 
 from users_page.forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
-
-
-class Error():
-    errors = []
-    temp_error = []
+from users_page.views import Error
     
     
 class CatalogMixin(Error):

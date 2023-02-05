@@ -5,6 +5,7 @@ from django.views.generic.list import ListView
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login
+from django.shortcuts import redirect
 
 from .forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
 
@@ -56,7 +57,7 @@ class Register(Error, ListView):
         else:
             self.errors.append("Користувач з таким телефоном вже створений")
 
-        return HttpResponseRedirect(reverse('home'))
+        return redirect(request.META.get('HTTP_REFERER'))
 
 
 class LoginPhone(Error, ListView):
@@ -82,7 +83,7 @@ class LoginPhone(Error, ListView):
         else:
             self.errors.append("Такого користувача не існує")
         
-        return HttpResponseRedirect(reverse('home'))
+        return redirect(request.META.get('HTTP_REFERER'))
 
 
 class LoginEmail(Error, ListView):
@@ -108,4 +109,4 @@ class LoginEmail(Error, ListView):
         else: 
             self.errors.append("Такого користувача не існує")
 
-        return HttpResponseRedirect(reverse('home'))
+        return redirect(request.META.get('HTTP_REFERER'))
