@@ -161,56 +161,17 @@ Catalog
 
                     <div id="brands__filter__content">
                         <div class="filter__content flex-column justify-content-center checkbox__brands">
+                            {% for brand in brands %}
+                            {% if forloop.counter <= 5%}
                             <div class="box-always">
-                                <input type="checkbox" class="custom-checkbox" id="Apple-mobile" name="Apple-mobile"
-                                    value="yes">
-                                <label for="Apple-mobile">Apple</label>
-                            </div>
-                            <div class="box-always">
-                                <input type="checkbox" class="custom-checkbox" id="Samsung-mobile" name="Samsung-mobile"
-                                    value="yes">
-                                <label for="Samsung-mobile">Samsung</label>
-                            </div>
-                            <div class="box-always">
-                                <input type="checkbox" class="custom-checkbox" id="realme-mobile" name="realme-mobile"
-                                    value="yes">
-                                <label for="realme-mobile">realme</label>
-                            </div>
-                            <div class="box-always">
-                                <input type="checkbox" class="custom-checkbox" id="Xiaomi-mobile" name="Xiaomi-mobile"
-                                    value="yes">
-                                <label for="Xiaomi-mobile">Xiaomi</label>
-                            </div>
-                            <div class="box-always">
-                                <input type="checkbox" class="custom-checkbox" id="Poco-mobile" name="Poco-mobile"
-                                    value="yes">
-                                <label for="Poco-mobile">Poco</label>
-                            </div>
+                            {% else %}
                             <div class="hidden">
-                                <input type="checkbox" class="custom-checkbox" id="OPPO-mobile" name="OPPO-mobile"
+                            {% endif %}
+                                <input type="checkbox" class="custom-checkbox" id="{{ brand.brand }}-mobile" name="{{ brand.brand }}-mobile"
                                     value="yes">
-                                <label for="OPPO-mobile">OPPO</label>
+                                <label for="{{ brand.brand }}-mobile">{{ brand.brand }}</label>
                             </div>
-                            <div class="hidden">
-                                <input type="checkbox" class="custom-checkbox" id="Motorola-mobile"
-                                    name="Motorola-mobile" value="yes">
-                                <label for="Motorola-mobile">Motorola</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="checkbox" class="custom-checkbox" id="Huawei-mobile" name="Huawei-mobile"
-                                    value="yes">
-                                <label for="Huawei-mobile">Huawei</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="checkbox" class="custom-checkbox" id="Nokia-mobile" name="Nokia-mobile"
-                                    value="yes">
-                                <label for="Nokia-mobile">Nokia</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="checkbox" class="custom-checkbox" id="OnePlus-mobile" name="OnePlus-mobile"
-                                    value="yes">
-                                <label for="OnePlus-mobile">OnePlus</label>
-                            </div>
+                            {% endfor %}
                         </div>
                         <div class="more brands__mobile">
                             <button class="more__button">
@@ -976,10 +937,10 @@ Catalog
                     {% for product in products %}
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                         <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
+                            <img src="{{product.img.all.0.img.url}}" alt="catalog__photo" class="catalog__img" draggable="false">
                             <a class="catalog__name">{{ product.title }}</a>
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">{{ product.price }}<img src="{% static 'img/svg/productTile/UAN.svg'%}"
+                                <span class="catalog__price">{{ product.price }} <img src="{% static 'img/svg/productTile/UAN.svg'%}"
                                         alt="UAN" draggable="false"></span>
                                 <button class="border-0 button__catalog">
                                     <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
@@ -994,108 +955,6 @@ Catalog
                         </div>
                     </div>
                     {% endfor %}
-
-
-                    <!-- <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
-                            <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="{% static 'img/svg/productTile/UAN.svg'%}"
-                                        alt="UAN" draggable="false"></span>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
-                                </button>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/basket.svg'%}" alt="catalog__basket" draggable="false">
-                                </button>
-                            </div>
-                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
-                                <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
-                            <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="{% static 'img/svg/productTile/UAN.svg'%}"
-                                        alt="UAN" draggable="false"></span>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
-                                </button>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/basket.svg'%}" alt="catalog__basket" draggable="false">
-                                </button>
-                            </div>
-                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
-                                <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
-                            <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="{% static 'img/svg/productTile/UAN.svg'%}"
-                                        alt="UAN" draggable="false"></span>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
-                                </button>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/basket.svg'%}" alt="catalog__basket" draggable="false">
-                                </button>
-                            </div>
-                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
-                                <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
-                            <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="{% static 'img/svg/productTile/UAN.svg'%}"
-                                        alt="UAN" draggable="false"></span>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
-                                </button>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/basket.svg'%}" alt="catalog__basket" draggable="false">
-                                </button>
-                            </div>
-                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
-                                <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="catalog__col d-flex  flex-column position-relative">
-                            <img src="{% static 'img/temp/pngwing 6.jpg'%}" alt="catalog__photo" class="catalog__img" draggable="false">
-                            <a class="catalog__name">Ігрова консоль Microsoft Xbox Series S 512 GB All-Digital
-                                Console</a>
-                            <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">11&nbsp999 <img src="{% static 'img/svg/productTile/UAN.svg'%}"
-                                        alt="UAN" draggable="false"></span>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
-                                </button>
-                                <button class="border-0 button__catalog">
-                                    <img src="{% static 'img/svg/productTile/basket.svg'%}" alt="catalog__basket" draggable="false">
-                                </button>
-                            </div>
-                            <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
-                                <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
-                            </button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

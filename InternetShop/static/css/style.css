@@ -704,6 +704,8 @@ a {
     margin: 0;
     box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
     transition: .4s;
+    justify-content: center;
+    align-items: center;
 }
 
 .catalog__col:hover {
@@ -711,8 +713,8 @@ a {
 }
 
 .catalog__img {
-    width: 100%;
-
+    height: 255px;
+    padding: 10px 0px;
 }
 
 .catalog__buy {
