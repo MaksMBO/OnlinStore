@@ -2762,6 +2762,29 @@ textarea {
     background-color: rgb(0, 187, 0);
 }
 
+.register__menu p, .login__menu p {
+    margin: 0px;
+}
+
+.register__input, .login__input {
+    margin-bottom: 10px;
+}
+
+.register_doble-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__link {
+    margin-bottom: 5px;
+}
+
+.register__title, .login__subtitle  {
+    margin-bottom: 25px;
+}
+
 .noUi-connect {
     background: #FF680A;
     cursor: pointer;

@@ -31,6 +31,9 @@
             Увійти по телефону
         </button>
         <button class="login__link" onclick="showRegister()">Зареєструватися</button>
+        {% if request.user.is_authenticated %}
+        <p><a class="login__link" href="{% url 'logout' %}">Вийти з акаунту</a></p>
+        {% endif %}
     </div>
 
     <div class="register__menu" id="register__menu">
@@ -42,6 +45,12 @@
                 Далі
             </button>
         </form>
-        <button class="register__link" onclick="closeRegister()">Увійти</button>
+        <div class="register_doble-link">
+            <button class="register__link" onclick="closeRegister()">Увійти</button>
+            {% if request.user.is_authenticated %}
+            <p><a class="login__link" href="{% url 'logout' %}">Вийти з акаунту</a></p>
+            {% endif %}
+        </div>
+
     </div>
 </div>

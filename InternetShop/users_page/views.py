@@ -1,7 +1,6 @@
 import base64
 from django.views.generic.list import ListView
-from django.contrib.auth import get_user_model
-from django.contrib.auth import login
+from django.contrib.auth import get_user_model, login, logout
 from django.shortcuts import redirect
 
 from catalog.utils import CatalogMixin, Notifications
@@ -97,3 +96,9 @@ class LoginEmail(Notifications, ListView):
             self.errors.append('Такого користувача не існує')
 
         return redirect(request.META.get('HTTP_REFERER'))
+   
+    
+def logout_acc(request): 
+    logout(request)
+    return redirect(request.META.get('HTTP_REFERER'))
+    

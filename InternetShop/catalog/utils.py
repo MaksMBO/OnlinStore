@@ -22,10 +22,8 @@ class CatalogMixin(Notifications):
         user_email_login = UserEmailLogin()
         user_phone_login = UserPhoneLogin()
         
-        print(self.success)
         self.temp_error = self.add_to_temp(self.errors, self.temp_error)
         self.temp_success = self.add_to_temp(self.success, self.temp_success)
-        print(self.temp_success)
         
         return render(request, html, context={
             'register_form': user_register, 'email_login_form': user_email_login,
