@@ -3,3 +3,4 @@
 InternetShop/.env
 InternetShop/venv
 InternetShop/db.sqlite3
+InternetShop/uploads
