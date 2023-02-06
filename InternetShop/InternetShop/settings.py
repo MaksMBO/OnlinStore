@@ -111,3 +111,21 @@ STATICFILES_DIR = ( '/var/www/html/static', )
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_cdn')
 
 MEDIA_URL = ''
+
+
+if DEBUG:
+    MIDDLEWARE += [
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]
+    INSTALLED_APPS += [
+        'debug_toolbar',
+    ]
+    INTERNAL_IPS = ['127.0.0.1', ]
+
+    import mimetypes
+    mimetypes.add_type("application/javascript", ".js", True)
+
+    DEBUG_TOOLBAR_CONFIG = {
+        'INTERCEPT_REDIRECTS': False,
+    }    
+    
