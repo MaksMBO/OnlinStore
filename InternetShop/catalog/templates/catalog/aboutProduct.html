@@ -227,12 +227,7 @@ About
                             {% endif %}
                         </div>
                         <div class="price">
-                            <span>
-                                {{ product.price }}
-                            </span>
-                            <span class="price-sign">
-                                ₴
-                            </span>
+                            <span class="catalog__price catalog__price_about price-sign">{{ product.price }} ₴</span>
                         </div>
                         <button
                             class="df jcc bd0 cup on aic uppercase medium df buyButton-0-2-350 buy-0-2-407 root-0-2-165 root-d82-0-2-464 large-0-2-175 contained-0-2-173 full-width"><svg
@@ -427,4 +422,5 @@ About
 <script src="{% static 'js/zoomInfo.js'%}"></script>
 <script type="module" src="{% static 'js/info.js'%}"></script>
 <script src="{% static 'js/hide.js'%}"></script>
+<script src="{% static 'js/price__space.js' %}"></script>
 {% endblock %}

@@ -5,5 +5,7 @@ $(document).ready(function(){
 
 function hideError(elem_id) {
     elem = document.getElementById(elem_id);
-    elem.style.display = "none";
+    if (elem) {
+        elem.style.display = "none";
+    }
 }

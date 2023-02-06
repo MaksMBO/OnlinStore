@@ -936,8 +936,7 @@ Catalog
                             <img src="{{product.img.all.0.img.url}}" alt="catalog__photo" class="catalog__img" draggable="false">
                             <a href="{{ product.get_pk }}" class="catalog__name">{{ product.title }}</a>
                             <div class="d-flex catalog__buy justify-content-end align-items-center">
-                                <span class="catalog__price">{{ product.price }} <img src="{% static 'img/svg/productTile/UAN.svg'%}"
-                                        alt="UAN" draggable="false"></span>
+                                <span class="catalog__price">{{ product.price }} ₴</span>
                                 <button class="border-0 button__catalog">
                                     <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
                                 </button>
@@ -964,10 +963,11 @@ Catalog
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 <script type="module" src="{% static 'js/sortingListCatalog.js'%}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'js/main.js'%}"></script>
 <script src="{% static 'js/nouislider.min.js'%}"></script>
 <script src="{% static 'js/slider__catalog.js'%}"></script>
 <script src="{% static 'js/showMore.js'%}"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'js/hide.js'%}"></script>
+<script src="{% static 'js/price__space.js' %}"></script>
 {% endblock %}
