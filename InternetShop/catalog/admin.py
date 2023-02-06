@@ -34,6 +34,7 @@ class ProductsAdmin(admin.ModelAdmin):
     search_fields = ('title', )
     fields = ('title', 'price', 'is_available', 'img', 'get_img')
     readonly_fields = ('get_img', )
+    filter_horizontal = ('img',)
     
     def get_img(self, obj):
         context = ''
