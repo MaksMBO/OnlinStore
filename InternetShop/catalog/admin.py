@@ -32,14 +32,17 @@ class ProductsAdmin(admin.ModelAdmin):
     list_display_links = ('title', )
     list_editable = ['is_available']
     search_fields = ('title', )
-    fields = ('title', 'price', 'is_available', 'img', 'get_img')
+    fields = ('title', 'price', 'type', 'brand', 'is_available', 'img', 'get_img')
     readonly_fields = ('get_img', )
     filter_horizontal = ('img',)
     
     def get_img(self, obj):
         context = ''
-        for p in obj.img.all():
-            context += f"<div class='div_img_admin'> <img src='{p.img.url}' class='img_admin'> </div>"
+        try:
+            for p in obj.img.all():
+                context += f"<div class='div_img_admin'> <img src='{p.img.url}' class='img_admin'> </div>"
+        except TypeError:
+            pass
         return mark_safe(context)
     
     get_img.short_description = 'Зображення'

@@ -14,10 +14,10 @@ class Basket(models.Model):
 class User(AbstractUser):
     """Class for describing a model with a user"""
 
-    phone = PhoneNumberField(null=False, blank=False, unique=True, verbose_name = 'Телефон')
-    basket = models.ForeignKey(Basket, on_delete=models.CASCADE, blank=True, null=True, verbose_name = 'Кошик')
-    like = models.ManyToManyField('catalog.Products', related_name='like', null=True, verbose_name = 'Товари що сподобалися')
-    comparison = models.ManyToManyField('catalog.Products', related_name='comparison', null=True, verbose_name = 'Товари для порівняня')
+    phone = PhoneNumberField(null=False, blank=False, unique=False, verbose_name = 'Телефон')
+    basket = models.ForeignKey(Basket, on_delete=models.CASCADE, verbose_name = 'Кошик')
+    like = models.ManyToManyField('catalog.Products', related_name='like', verbose_name = 'Товари що сподобалися')
+    comparison = models.ManyToManyField('catalog.Products', related_name='comparison', verbose_name = 'Товари для порівняня')
 
     class Meta:
         db_table = 'user' 

@@ -66,7 +66,7 @@ class LoginPhone(Notifications, ListView):
                 self.errors.append('Такого користувача не існує')
 
             if user_auth is not None:
-                login(request, user_auth)
+                login(request, user_auth, backend='django.contrib.auth.backends.ModelBackend')
                 self.success.append(f'Користувач {user_auth.first_name} {user_auth.last_name}')
         else:
             self.errors.append('Такого користувача не існує')
@@ -93,7 +93,7 @@ class LoginEmail(Notifications, ListView):
                 self.errors.append('Такого користувача не існує')
 
             if user_auth is not None:
-                login(request, user_auth)
+                login(request, user_auth, backend='django.contrib.auth.backends.ModelBackend')
                 self.success.append(f'Користувач {user_auth.first_name} {user_auth.last_name}')
         else: 
             self.errors.append('Такого користувача не існує')
@@ -104,4 +104,3 @@ class LoginEmail(Notifications, ListView):
 def logout_acc(request): 
     logout(request)
     return redirect(request.META.get('HTTP_REFERER'))
-    
