@@ -15,6 +15,8 @@ About
 
     {% include "users_page/partials/success.html" %}
 
+    {%  include "users_page/partials/bin.html" %}
+
     <section class="navigation">
         <div class="container">
             <ul class="navigation_links d-flex flex-row align-items-center">
@@ -72,11 +74,6 @@ About
                                 <a href="" class="active-tab-0-2-381"
                                     onclick="clickonelement(this)"><span>Відгуки</span></a>
                             </div>
-                            <!-- style="transition: all 0.3s ease 0s; width: 174.64px; left: 17.81px;"> -->
-                            <!-- style="transition: all 0.3s ease 0s; width: 194.6px; left: 196.8px;"> -->
-                            <!-- style="transition: all 0.3s ease 0s; width: 137.71px; left: 395.95px;"> -->
-                            <!-- style="transition: all 0.3s ease 0s; width: 84.92px; left: 537.66px;"> -->
-                            <!-- style="transition: all 0.3s ease 0s; width: 107.74px; left: 626px;"> -->
                             <div class="active-bar-0-2-107" id="id1"
                                 style="transition: all 0.3s ease 0s; width: 174.64px; left: 17.81px;">
                             </div>
@@ -423,4 +420,5 @@ About
 <script type="module" src="{% static 'js/info.js'%}"></script>
 <script src="{% static 'js/hide.js'%}"></script>
 <script src="{% static 'js/price__space.js' %}"></script>
+<script src="{% static 'js/hide_bin.js'%}"></script>
 {% endblock %}

@@ -15,6 +15,8 @@ Catalog
 
     {% include "users_page/partials/success.html" %}
 
+    {%  include "users_page/partials/bin.html" %}
+
     <section class="catalog__navigation">
         <div class="container">
             <ul class="navigation_links d-flex flex-row align-items-center">
@@ -257,4 +259,5 @@ Catalog
 <script type="module" src="{% static 'js/comparison__sorting.js' %}"></script>
 <script src="{% static 'js/hide.js'%}"></script>
 <script src="{% static 'js/price__space.js' %}"></script>
+<script src="{% static 'js/hide_bin.js'%}"></script>
 {% endblock %}
