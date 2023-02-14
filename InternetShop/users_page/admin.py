@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from users_page.models import User, Basket
+from users_page.models import User
 
 
 class UserAdmin(admin.ModelAdmin):
@@ -10,14 +10,5 @@ class UserAdmin(admin.ModelAdmin):
     list_editable = ['is_superuser']
     filter_horizontal = ('like', 'comparison')
     
-class BasketAdmin(admin.ModelAdmin):
-    list_display = ('get_basket', )
-    list_display_links = ('get_basket', )
-    
-    def get_basket(self, obj):
-        return "\n".join([p.basket for p in obj.basket.all()])
-    
-    get_basket.short_description = 'Кошик'
 
 admin.site.register(User, UserAdmin)
-admin.site.register(Basket, BasketAdmin)

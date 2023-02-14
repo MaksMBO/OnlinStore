@@ -7,4 +7,6 @@ urlpatterns = [
  path('login/phone/', views.LoginPhone.as_view(), name='login_phone'),
  path('login/email/', views.LoginEmail.as_view(), name='login_email'),
  path('logout/', views.logout_acc, name='logout'),
+ path('addbin/<int:id>/', views.addbin, name='addBin'),
+ path('dellbin/<int:id>/', views.del_bin_item, name='dellBin'),
 ]

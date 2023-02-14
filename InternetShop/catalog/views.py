@@ -2,10 +2,6 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.http import JsonResponse
-from django.http import HttpResponse
-from django.core import serializers
-from django.forms.models import model_to_dict
-import simplejson as json
 from django.db.models import Q
 
 from .utils import CatalogMixin

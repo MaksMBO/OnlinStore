@@ -1,6 +1,11 @@
 from django.shortcuts import render
+from django.contrib.auth import get_user_model
 
 from users_page.forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
+
+
+User = get_user_model()
+
 
 class Notifications:
     errors = []
@@ -30,7 +35,8 @@ class CatalogMixin(Notifications):
             'email_login_form': user_email_login,
             'phone_login_form': user_phone_login, 
             'errors': self.temp_error,
-            'success':self.temp_success
+            'success':self.temp_success,
+            'bin':self.request.user.basket,
         }
         
         return context

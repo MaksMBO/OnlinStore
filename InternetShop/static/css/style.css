@@ -2849,7 +2849,7 @@ textarea {
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 200;
+    z-index: 0;
     background: rgba(0, 0, 0, .54);
     opacity: 0;
     transition: opacity 0s cubic-bezier(0, 0, 1, 1), visibility 0s;
@@ -2886,6 +2886,7 @@ textarea {
     height: 140px;
     width: auto;
     max-width: 200px;
+    min-width: 160px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 
 from catalog.utils import CatalogMixin, Notifications
 from .forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
+from catalog.models import Products
 
 User = get_user_model()
 
@@ -104,3 +105,17 @@ class LoginEmail(Notifications, ListView):
 def logout_acc(request): 
     logout(request)
     return redirect(request.META.get('HTTP_REFERER'))
+
+def addbin(request, id):
+    bin=Products.objects.get(id=id)
+    user = User.objects.get(id=request.user.id)
+    user.basket.add(bin)
+    
+    return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
+
+def del_bin_item(request, id):
+    bin = Products.objects.get(id=id)
+    user = User.objects.get(id = request.user.id)
+    user.basket.remove(bin)
+    
+    return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
