@@ -12,7 +12,6 @@ function BinShow(){
 }
 
 function BinHide(second=true){
-    console.log("suka");
     var inp = document.getElementById("bin");
     inp.style.opacity = '0';
     if (second) {
@@ -25,7 +24,6 @@ function BinHide(second=true){
 
 function BinDell(){
     var inp = document.getElementById("bin");
-    console.log("dell");
     inp.style.opacity = '1';
     document.getElementById("bin").style.transition = "opacity .3s cubic-bezier(0, 0, 1, 1), visibility .3s";
     document.getElementById("bin").style.visibility = "inherit";

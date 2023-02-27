@@ -49,3 +49,58 @@ function showMobileCatalog() {
 function animation(id, toggleAtr) {
   document.getElementById(id).classList.add(toggleAtr);
 }
+
+
+function plusProduct(id) {
+  object = document.getElementById("number__"+id);
+  value = object.value;
+  object_price_one = document.getElementById("product-price_"+id);
+  value_price_one = object_price_one.textContent;
+  value_price_one_main = value_price_one.slice(0, -1);
+  value_price_one_main = Number(value_price_one_main.replace('\xa0', ''));
+  value_price_one_main = value_price_one_main / value;
+  value++;
+  value_price_one_main = value_price_one_main * value;
+  object.value = value;
+  value_price_one_main = value_price_one_main.toString()
+  object_price_one.textContent = value_price_one_main + " ₴";
+  var elements = document.getElementsByClassName("product-price");
+  sum = 0;
+  for (let i = 0; i<elements.length; i++) {
+    temp_value = elements[i].textContent;
+    value_all = temp_value.slice(0, -1);
+    value_all = Number(value_all.replace('\xa0', ''));
+    sum = sum + value_all;
+  }
+  var total_price = document.getElementById("sum_price-number");
+  total_price.textContent = sum.toString() + " ₴";
+}
+
+function minusProduct(id) {
+  object = document.getElementById("number__"+id);
+  value = object.value;
+  
+  if (!(value <= 1)) {
+    object_price_one = document.getElementById("product-price_"+id);
+    value_price_one = object_price_one.textContent;
+    value_price_one_main = value_price_one.slice(0, -1);
+    value_price_one_main = Number(value_price_one_main.replace('\xa0', ''));
+    value_price_one_main = value_price_one_main / value; 
+    value--;
+    value_price_one_main = value_price_one_main * value;
+    value_price_one_main = value_price_one_main.toString()
+    object_price_one.textContent = value_price_one_main + " ₴";
+    var elements = document.getElementsByClassName("product-price");
+    sum = 0;
+    for (let i = 0; i<elements.length; i++) {
+      temp_value = elements[i].textContent;
+      value_all = temp_value.slice(0, -1);
+      value_all = Number(value_all.replace('\xa0', ''));
+      sum = sum + value_all;
+    }
+    var total_price = document.getElementById("sum_price-number");
+    total_price.textContent = sum.toString() + " ₴";
+  }
+  
+  object.value = value;
+}
