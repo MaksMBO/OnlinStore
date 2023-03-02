@@ -442,8 +442,12 @@ a {
 .register__menu {
     width: 344px;
     height: 476px;
+    justify-content: space-around;
 }
 
+.login__menu p {
+    margin-bottom: 0px;
+}
 
 .login__title,
 .register__title {
@@ -486,6 +490,7 @@ a {
     font-weight: 500;
     font-size: 20px;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .login__menu:first-child,
@@ -699,6 +704,8 @@ a {
     margin: 0;
     box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
     transition: .4s;
+    justify-content: center;
+    align-items: center;
 }
 
 .catalog__col:hover {
@@ -706,8 +713,8 @@ a {
 }
 
 .catalog__img {
-    width: 100%;
-
+    height: 255px;
+    padding: 10px 0px;
 }
 
 .catalog__buy {
@@ -750,6 +757,11 @@ img[alt="UAN"] {
     .catalog__price {
         font-size: 18px;
     }
+}
+
+.catalog__price_about {
+    font-size: 36px !important;
+    line-height: 37px !important;
 }
 
 
@@ -1220,6 +1232,11 @@ element.style {
 
 .cup {
     cursor: pointer;
+}
+
+.phone_form p,
+.email_form p {
+    margin-bottom: 25px;
 }
 
 .title-0-2-430 button:hover,
@@ -1817,6 +1834,7 @@ textarea {
     color: #3B6D9A;
     border-bottom: 1px #3B6D9A dashed;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .spanMore {
@@ -1877,6 +1895,7 @@ textarea {
     background: url("/static/img/png/arrows/right-chevron.png") 12px 11px no-repeat;
     margin-right: 20px;
 }
+
 .sliderii .slick-arrow {
     position: absolute;
     top: 35%;
@@ -1947,7 +1966,7 @@ textarea {
     top: 0;
     width: 30px;
     height: 30px;
-    margin: 20px;   
+    margin: 20px;
     transition: .3s;
     cursor: pointer;
 }
@@ -2288,22 +2307,21 @@ textarea {
 .noUi-horizontal .noUi-handle {
     width: 12px;
     height: 12px;
-    right: -6px;
-    top: -6px;
     box-shadow: none;
     border-radius: 100%;
     background: #FF680A;
     border: none;
     cursor: pointer;
+    margin-left: auto;
 }
 
-.noUi-handle:hover,
+/* .noUi-handle:hover,
 .noUi-handle:active {
     width: 24px;
     height: 24px;
     right: -12px;
     top: -12px;
-}
+} */
 
 .filter__content {
     display: flex;
@@ -2722,4 +2740,349 @@ textarea {
         flex-direction: column;
         align-items: start;
     }
+}
+
+.error,
+.success {
+    position: fixed;
+    border-radius: 10px 10px 5px 5px;
+    background: rgb(242, 242, 242);
+    top: 70px;
+    z-index: 20;
+    right: 5px;
+    box-shadow: 3px 3px 0px rgba(108, 108, 108, 0.204);
+}
+
+.error_text,
+.success_text {
+    padding: 10px 20px;
+    display: flex;
+}
+
+.error_line,
+.success_line {
+    width: 100%;
+    height: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.error_line {
+    background-color: red;
+}
+
+.success_line {
+    background-color: rgb(0, 187, 0);
+}
+
+.register__menu p,
+.login__menu p {
+    margin: 0px;
+}
+
+.register__input,
+.login__input {
+    margin-bottom: 10px;
+}
+
+.register_doble-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__link {
+    margin-bottom: 5px;
+}
+
+.register__title,
+.login__subtitle {
+    margin-bottom: 25px;
+}
+
+.noUi-connect {
+    background: #FF680A;
+    cursor: pointer;
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.noUi-connect,
+.noUi-origin {
+    will-change: transform;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transform-origin: 0 0;
+    transform-style: flat;
+}
+
+.noUi-origin {
+    top: -4px;
+    right: -6px;
+}
+
+.dropbtn__span-link,
+.dropbtn__span-link:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.bin {
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 0;
+    background: rgba(0, 0, 0, .54);
+    opacity: 0;
+    transition: opacity 0s cubic-bezier(0, 0, 1, 1), visibility 0s;
+}
+
+.bin-content {
+    width: 60%;
+    min-height: 40%;
+    max-height: 83%;
+    background: #FFF;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden auto;
+    scroll-margin: 20px;
+}
+
+.bin-content::-webkit-scrollbar {
+    width: 7px;
+    height: 20px;
+    border-radius: 9em;
+    margin-right: 5px;
+}
+
+.bin-content::-webkit-scrollbar-track {
+    margin: 15px;
+}
+
+.bin-content::-webkit-scrollbar-thumb {
+    background-color: #c5c5c5;
+    border-radius: 9em;
+}
+
+.img_product {
+    height: 140px;
+    width: auto;
+    max-width: 200px;
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_product-img {
+    height: 140px;
+    width: auto;
+}
+
+.title_bin {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 28px;
+    color: #000000;
+}
+
+.product {
+    display: flex;
+    border-bottom: 3px rgba(71, 71, 71, 0.5) solid;
+    margin-bottom: 30px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3B6D9A;
+}
+
+.product-code {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.product-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+    margin-left: 20px;
+}
+
+.cart-counter {
+    margin-top: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
+.img_product,
+.product-info {
+    margin-bottom: 15px;
+}
+
+.product:first-of-type {
+    margin-top: 20px;
+}
+
+.product-info {
+    width: 100%;
+}
+
+.input-counter {
+    font-size: 14px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #d2d2d2 !important;
+    border-radius: 4px !important;
+    outline-offset: -2px;
+    padding: 1px 2px;
+    /* border: none; */
+    outline: none;
+    -webkit-appearance: textfield;
+    width: 56px;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-align: center;
+    height: 40px;
+}
+
+.button-counter {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+
+}
+
+.cart-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button-counter:disabled {
+    color: #a6a5a5;
+    cursor: default;
+}
+
+.order_buy {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    /* justify-content: space-between; */
+    align-items: center;
+    max-width: 375px;
+    background: rgba(197, 226, 255, 0.5);
+    padding: 30px 25px 12px 25px;
+    border-radius: 6px;
+}
+
+.sum_price-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.sum_price-number {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+
+.button_buy-bin {
+    width: 100%;
+}
+
+.button_buy-bin-button {
+    width: 100%;
+    height: 46px;
+    border: none;
+    background: #FF680A;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.sum_price {
+    margin-bottom: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.del_bin-img {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.header_bin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.del_one_bin-img {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
 }
