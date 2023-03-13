@@ -54,10 +54,17 @@ class FilterProducts(CatalogMixin, ListView):
     
 class FilterProductsJson(CatalogMixin, ListView):
     def get_queryset(self):
+        all_brands = [i.brand for i in ProductsBrand.objects.all()]
+        if not self.request.GET.get("brand", False):
+            brand =  Q(brand__brand__in=all_brands)
+        else:
+            brand = Q(brand__brand__in=self.request.GET.getlist('brand'))
+       
         query = Products.objects.filter(
-            Q(brand__brand__in=self.request.GET.getlist('brand')) &
+            brand &
             Q(price__gte=self.request.GET.get('price_start'), price__lte=self.request.GET.get('price_end'))
             ).prefetch_related('img').values('title', 'price', 'img__img', 'id').distinct()
+    
         return query
 
     def get(self, request, *args, **kwargs):
