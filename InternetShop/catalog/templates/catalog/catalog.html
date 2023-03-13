@@ -173,13 +173,18 @@ Catalog
                                 {% else %}
                                 <div class="hidden">
                                 {% endif %}
-                                    <input type="checkbox" class="custom-checkbox" id="{{ brand.brand }}-mobile" name="brand"
+                                <button class="on_checkbox-button">
+                                    <input  type="checkbox" class="custom-checkbox" id="{{ brand.brand }}-mobile" name="brand"
                                         value="{{ brand.brand }}">
-                                    <label for="{{ brand.brand }}-mobile">{{ brand.brand }}</label>
+                                    <label type="submit" for="{{ brand.brand }}-mobile">{{ brand.brand }}</label>
+                                </button>
+                                    
+                                    <!-- <input type="submit"> -->
+                                    
                                 </div>
                                 {% endfor %}
                             </div>
-                            <button type="submit">send</button>
+                            
                         
                         <div class="more brands__mobile">
                             <button class="more__button">
