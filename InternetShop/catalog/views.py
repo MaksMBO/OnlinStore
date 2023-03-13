@@ -16,7 +16,6 @@ class Catalog(CatalogMixin, ListView):
             'title', 'price', 'img', 'type', 'brand', 'is_available',
         )
         context['brands'] = ProductsBrand.objects.all()
-        context['bin'] = request.user.basket
         return render(request, 'catalog/catalog.html', context=context)
 
 

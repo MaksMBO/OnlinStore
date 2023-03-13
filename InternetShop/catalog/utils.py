@@ -29,9 +29,12 @@ class CatalogMixin(Notifications):
 
         self.temp_error = self.add_to_temp(self.errors, self.temp_error)
         self.temp_success = self.add_to_temp(self.success, self.temp_success)
-        bin = ''
-        if self.request.user == "AnonymousUser":
+        
+        if self.request.user.is_anonymous:
+            bin = ''
+        else:
             bin = self.request.user.basket
+        
         context = {
             'register_form': user_register,
             'email_login_form': user_email_login,

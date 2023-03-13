@@ -1015,10 +1015,4 @@ Catalog
 <script src="{% static 'js/scripts.js' %}"></script>
 <script src="http://twitter.github.io/hogan.js/builds/3.0.1/hogan-3.0.1.js"></script>
 <script src="{% static 'js/hide_bin.js'%}"></script>
-<script src="https://unpkg.com/htmx.org@1.6.0"></script>
-<script>
-    document.body.addEventListener('htmx:configRequest', (e) => {
-      e.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
-      })
-</script>
 {% endblock %}
