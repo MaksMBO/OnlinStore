@@ -3111,4 +3111,6 @@ textarea {
     background: none;
     border: none;
     padding: 0px;
+    display: inline-flex;
+    width: 100%;
 }
