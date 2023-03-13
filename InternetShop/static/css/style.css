@@ -68,6 +68,7 @@ a {
 
 .header__functions__li {
     padding: 0 8px !important;
+    position: relative;
 }
 
 .header__functions__li:not(:last-child) {
@@ -3083,6 +3084,25 @@ textarea {
     height: 22px;
     width: 22px;
     cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+#count {
+    background: #FF680A;
+    padding: 5px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+
     top: 0;
     right: 0;
 }

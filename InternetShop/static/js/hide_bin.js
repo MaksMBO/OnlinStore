@@ -29,3 +29,21 @@ function BinDell(){
     document.getElementById("bin").style.visibility = "inherit";
     document.getElementById("bin").style.zIndex = 200;
 }
+
+function countPlus() {
+    setTimeout('addCount()', 500);
+}
+
+function addCount() {
+    var inp = document.getElementById("count");
+    var all = document.getElementsByClassName("product");
+    all = all.length;
+    inp.textContent = all;
+}
+
+function countMinus(){
+    var inp = document.getElementById("count");
+    var all = document.getElementsByClassName("product");
+    all = all.length - 1;
+    inp.textContent = all;
+}
