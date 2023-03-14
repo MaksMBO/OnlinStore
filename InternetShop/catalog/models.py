@@ -50,5 +50,8 @@ class Products(models.Model):
     def get_pk(self):
         return reverse('aboutProduct', kwargs={'id': self.pk})
     
+    def aboutProduct(self, id):
+        return reverse('aboutProduct', kwargs={'id': self.pk})
+    
     def __str__(self):
         return self.title

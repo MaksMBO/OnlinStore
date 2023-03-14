@@ -110,6 +110,7 @@ def addbin(request, id):
     bin=Products.objects.get(id=id)
     user = User.objects.get(id=request.user.id)
     user.basket.add(bin)
+
     
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
 

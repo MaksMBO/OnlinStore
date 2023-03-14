@@ -36,21 +36,6 @@ class ProductComparison(CatalogMixin, ListView):
     def get(self, request):
         context = self.renderPage()
         return render(request, 'catalog/productComparison.html', context=context)
-
-class FilterProducts(CatalogMixin, ListView):
-    
-    def get(self, request):
-        query = Products.objects.filter(
-            Q(brand__brand__in=self.request.GET.getlist('brand')) &
-            Q(price__gte=self.request.GET.get('price_start'), price__lte=self.request.GET.get('price_end'))
-            ) 
-        context = self.renderPage()
-        context['products'] = Products.objects.all().prefetch_related('img').only(
-            'title', 'price', 'img', 'type', 'brand', 'is_available',
-        )
-        context['brands'] = ProductsBrand.objects.all()
-        context['query'] = query
-        return render(request, 'catalog/catalog.html', context=context)
     
 class FilterProductsJson(CatalogMixin, ListView):
     def get_queryset(self):
@@ -77,11 +62,13 @@ class FilterProductsJson(CatalogMixin, ListView):
         while i < my_len:
             if queryset[i]['title'] not in temp:
                 temp.append(queryset[i]['title'])
-                # queryset[i]['url'] = 
                 i += 1
             else:
                 del queryset[i]
                 my_len -= 1
+                
+        context= {'products': queryset}
+       
 
-        return JsonResponse({"movies": queryset}, safe=False)
+        return render(request, 'catalog/partials/catalog__product.html', context=context)
     
