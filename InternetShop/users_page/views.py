@@ -15,6 +15,9 @@ class Home(CatalogMixin, ListView):
 
     def get(self, request):
         context = self.renderPage()
+        context['products'] = Products.objects.all().order_by('?')[:6].prefetch_related('img').only(
+            'title', 'price', 'img', 'type', 'brand', 'is_available',
+        )
         return render(request, 'users_page/authorization.html', context=context)
 
 

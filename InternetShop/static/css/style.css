@@ -707,6 +707,7 @@ a {
     transition: .4s;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .catalog__col:hover {
@@ -3114,3 +3115,9 @@ textarea {
     display: inline-flex;
     width: 100%;
 }
+
+@media (min-width: 1200px)
+{.col-xl-2 {
+    flex: 0 0 auto;
+    width: 20%!important;
+}}
