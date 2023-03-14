@@ -27,6 +27,7 @@ function render(data) {
     div.innerHTML = output;
 }
 
+
 let html = '\
 {{#movies}}\
 <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">\
@@ -36,11 +37,14 @@ let html = '\
     <div class="d-flex catalog__buy justify-content-end align-items-center">\
         <span class="catalog__price">{{ price }} ₴</span>\
         <button class="border-0 button__catalog">\
+        <img src="/static/img/svg/productTile/division.svg" alt="catalog__division" draggable="false">\
         </button>\
-        <button class="border-0 button__catalog">\
+        <button class="border-0 button__catalog" hx-post="/addbin/{{id}}/" hx-target="#bin-content" hx-swap="outerHTML">\
+            <img src="/static/img/svg/productTile/basket.svg" alt="catalog__basket" draggable="false" onclick="countPlus()">\
         </button>\
     </div>\
     <button class="position-absolute top-0 end-0 border-0 catalog__button__like">\
+    <img src="/static/img/svg/productTile/Heart_Icon_Deselected.svg" alt="like" draggable="false">\
     </button>\
 </div>\
 </div>\

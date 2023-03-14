@@ -7,7 +7,7 @@ Catalog
 {% endblock %}
 
 {% block content %} 
-<body>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     
     {% include "users_page/partials/error.html" %} 
 
@@ -977,15 +977,10 @@ Catalog
                                 <button class="border-0 button__catalog">
                                     <img src="{% static 'img/svg/productTile/division.svg'%}" alt="catalog__division" draggable="false">
                                 </button>
-                                <!-- <form action="{% url 'addBin' product.id %}" method="post"> -->
-                                    <!-- {% csrf_token %} -->
-                    
                                     <button class="border-0 button__catalog"
                                     hx-post="{% url 'addBin' product.id %}" hx-target="#bin-content" hx-swap="outerHTML">
                                         <img src="{% static 'img/svg/productTile/basket.svg'%}" alt="catalog__basket" draggable="false" onclick="countPlus()">
                                     </button>
-                                <!-- </form> -->
-
                             </div>
                             <button class="position-absolute top-0 end-0 border-0 catalog__button__like">
                                 <img src="{% static 'img/svg/productTile/Heart_Icon_Deselected.svg'%}" alt="like" draggable="false">
