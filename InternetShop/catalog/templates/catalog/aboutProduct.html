@@ -229,6 +229,8 @@ About
                             <span class="catalog__price catalog__price_about price-sign">{{ product.price }} ₴</span>
                         </div>
                         <button
+                        hx-post="{% url 'addBin' product.id %}" hx-target="#bin-content" hx-swap="outerHTML"
+                        onclick="countPlus()"
                             class="df jcc bd0 cup on aic uppercase medium df buyButton-0-2-350 buy-0-2-407 root-0-2-165 root-d82-0-2-464 large-0-2-175 contained-0-2-173 full-width"><svg
                                 viewBox="0 0 24 24" fill="currentColor" class="icon-0-2-166 mr8 icon-0-2-31">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
