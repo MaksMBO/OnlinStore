@@ -7,6 +7,7 @@ from django.shortcuts import redirect
 from catalog.utils import CatalogMixin, Notifications
 from .forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
 from catalog.models import Products
+from .models import Bin
 
 User = get_user_model()
 
@@ -110,16 +111,56 @@ def logout_acc(request):
     return redirect(request.META.get('HTTP_REFERER'))
 
 def addbin(request, id):
-    bin=Products.objects.get(id=id)
+    bin_product = Products.objects.get(id=id)
+    bin_count = 1
+    
     user = User.objects.get(id=request.user.id)
-    user.basket.add(bin)
-
+    
+    bins = Bin.objects.filter(product=bin_product)
+    if bins.exists():
+        for i in bins:
+            for j in i.bin.all():
+                if j.id == user.id:
+                    i.count += 1
+                    i.save()
+    else:
+        bin = Bin(product=bin_product, count=bin_count)
+        bin.save()
+        user.basket.add(bin)
     
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
 
 def del_bin_item(request, id):
-    bin = Products.objects.get(id=id)
     user = User.objects.get(id = request.user.id)
-    user.basket.remove(bin)
+    bins = Bin.objects.filter(product__id=id)
+    for i in bins:
+        for j in i.bin.all():
+            if j.id == user.id:
+                user.basket.remove(i)
+                i.delete()
+    
+    
     
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
+
+def addCountBin(request, id):
+    user = User.objects.get(id = request.user.id)
+    bins = Bin.objects.filter(product__id=id)
+    for i in bins:
+        for j in i.bin.all():
+            if j.id == user.id:
+                i.count += 1
+                i.save()
+    return render(request, 'users_page/partials/bin.html', context={'bin':Bin.objects.all()})
+    
+    
+def delCountBin(request, id):
+    user = User.objects.get(id = request.user.id)
+    bins = Bin.objects.filter(product__id=id)
+    for i in bins:
+        for j in i.bin.all():
+            if j.id == user.id:
+                if i.count > 1: 
+                    i.count -= 1 
+                    i.save()
+    return render(request, 'users_page/partials/bin.html', context={'bin':Bin.objects.all()})

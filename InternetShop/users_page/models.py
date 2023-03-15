@@ -8,8 +8,7 @@ class User(AbstractUser):
     """Class for describing a model with a user"""
 
     phone = PhoneNumberField(null=False, blank=False, unique=False, verbose_name = 'Телефон')
-    basket = models.ManyToManyField('catalog.Products', related_name='bin', verbose_name = 'Кошик')
-    count_basket = models.ManyToManyField("Count", verbose_name='Кількість товару в кошиках')
+    basket = models.ManyToManyField('Bin', related_name='bin', verbose_name = 'Кошик')
     like = models.ManyToManyField('catalog.Products', related_name='like', verbose_name = 'Товари що сподобалися')
     comparison = models.ManyToManyField('catalog.Products', related_name='comparison', verbose_name = 'Товари для порівняня')
 
@@ -20,6 +19,8 @@ class User(AbstractUser):
 
     def __str__(self):
         return f'{self.first_name}'
-    
-class Count(models.Model):
-    count = models.IntegerField(verbose_name='Кількість товару в кошику')
+
+
+class Bin(models.Model):
+    product = models.ForeignKey('catalog.Products', on_delete=models.CASCADE, verbose_name = 'Кошик')
+    count = models.IntegerField(verbose_name='кількість')

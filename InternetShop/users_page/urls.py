@@ -9,4 +9,6 @@ urlpatterns = [
  path('logout/', views.logout_acc, name='logout'),
  path('addbin/<int:id>/', views.addbin, name='addBin'),
  path('dellbin/<int:id>/', views.del_bin_item, name='dellBin'),
+ path('addCountBin/<int:id>/', views.addCountBin, name='addCountBin'),
+ path('delCountBin/<int:id>/', views.delCountBin, name='delCountBin'),
 ]

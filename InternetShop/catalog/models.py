@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from django.conf import settings
+
 
 class ProductsImg(models.Model):
     img = models.FileField(upload_to='uploads/', verbose_name = 'Зображення')
@@ -42,6 +44,7 @@ class Products(models.Model):
     type = models.ForeignKey(ProductsType, on_delete=models.CASCADE, verbose_name = 'Тип товару')
     brand = models.ForeignKey(ProductsBrand, on_delete=models.CASCADE, verbose_name = 'Бренд')
     is_available = models.BooleanField(default=False, verbose_name = 'Наявність')
+
     
     class Meta: 
         verbose_name = 'Товари'
@@ -55,3 +58,8 @@ class Products(models.Model):
     
     def __str__(self):
         return self.title
+
+
+
+    
+    
