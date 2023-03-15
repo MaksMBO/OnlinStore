@@ -9,6 +9,7 @@ class User(AbstractUser):
 
     phone = PhoneNumberField(null=False, blank=False, unique=False, verbose_name = 'Телефон')
     basket = models.ManyToManyField('catalog.Products', related_name='bin', verbose_name = 'Кошик')
+    count_basket = models.ManyToManyField("Count", verbose_name='Кількість товару в кошиках')
     like = models.ManyToManyField('catalog.Products', related_name='like', verbose_name = 'Товари що сподобалися')
     comparison = models.ManyToManyField('catalog.Products', related_name='comparison', verbose_name = 'Товари для порівняня')
 
@@ -19,3 +20,6 @@ class User(AbstractUser):
 
     def __str__(self):
         return f'{self.first_name}'
+    
+class Count(models.Model):
+    count = models.IntegerField(verbose_name='Кількість товару в кошику')
