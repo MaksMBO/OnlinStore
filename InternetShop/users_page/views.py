@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.contrib.auth import get_user_model, login, logout
 from django.shortcuts import redirect
+from django.db.models import F
 
 from catalog.utils import CatalogMixin, Notifications
 from .forms import UserRegistrationForm, UserEmailLogin, UserPhoneLogin
@@ -151,16 +152,13 @@ def addCountBin(request, id):
             if j.id == user.id:
                 i.count += 1
                 i.save()
-    return render(request, 'users_page/partials/bin.html', context={'bin':Bin.objects.all()})
+    return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
     
     
 def delCountBin(request, id):
-    user = User.objects.get(id = request.user.id)
-    bins = Bin.objects.filter(product__id=id)
-    for i in bins:
-        for j in i.bin.all():
-            if j.id == user.id:
-                if i.count > 1: 
-                    i.count -= 1 
-                    i.save()
-    return render(request, 'users_page/partials/bin.html', context={'bin':Bin.objects.all()})
+    user = User.objects.get(id=request.user.id)
+    bins = Bin.objects.filter(product__id=id, bin=user)
+
+    bins.update(count=F('count') - 1)
+
+    return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
