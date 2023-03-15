@@ -115,50 +115,44 @@ def addbin(request, id):
     bin_product = Products.objects.get(id=id)
     bin_count = 1
     
-    user = User.objects.get(id=request.user.id)
+    user = request.user
     
-    bins = Bin.objects.filter(product=bin_product)
+    bins = Bin.objects.filter(product__id=id, bin=user)
+    
     if bins.exists():
-        for i in bins:
-            for j in i.bin.all():
-                if j.id == user.id:
-                    i.count += 1
-                    i.save()
+        bins.update(count=F('count') + 1)
     else:
         bin = Bin(product=bin_product, count=bin_count)
         bin.save()
         user.basket.add(bin)
-    
+ 
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
 
 def del_bin_item(request, id):
     user = User.objects.get(id = request.user.id)
-    bins = Bin.objects.filter(product__id=id)
-    for i in bins:
-        for j in i.bin.all():
-            if j.id == user.id:
-                user.basket.remove(i)
-                i.delete()
+    bin = Bin.objects.get(product__id=id, bin=user)
     
-    
+    user.basket.remove(bin)
+    bin.delete()    
     
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
 
 def addCountBin(request, id):
     user = User.objects.get(id = request.user.id)
-    bins = Bin.objects.filter(product__id=id)
-    for i in bins:
-        for j in i.bin.all():
-            if j.id == user.id:
-                i.count += 1
-                i.save()
+    bin = Bin.objects.get(product__id=id, bin=user)
+   
+    bin.count += 1
+    bin.save()
+    
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
     
     
 def delCountBin(request, id):
     user = User.objects.get(id=request.user.id)
-    bins = Bin.objects.filter(product__id=id, bin=user)
+    bin = Bin.objects.get(product__id=id, bin=user)
 
-    bins.update(count=F('count') - 1)
+    if bin.count > 1:
+        bin.count -= 1
+        bin.save()
 
     return render(request, 'users_page/partials/bin.html', context={'bin':user.basket})
