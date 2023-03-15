@@ -16,18 +16,20 @@
                     <span class="product-code">Код: 63913</span>
                     <button class="del_one_bin-img" style="border: none; background: none;"
                         hx-post="{% url 'dellBin' product.product.id %}" hx-target="#bin-content" hx-swap="outerHTML" onclick="BinDell()">
-                        <img src="{% static 'img/png/bin/bin.png' %}" alt="img-product" class="del_one_bin-img" onclick="countMinus()">
+                        <img src="{% static 'img/png/bin/bin.png' %}" alt="img-product" class="del_one_bin-img" onclick="countMinus({{product.product.id}})">
                     </button>
                 </div>
                 <div class="cart-counter">
                     <button type="button" class="button-counter" aria-label="Видалити один товар"
                         id="cart-counter-decrement-button"
+                        onclick="clickMinus({{product.product.id}})"
                         hx-post="{% url 'delCountBin' product.product.id %}" hx-target="#bin-content" hx-swap="outerHTML">
                         -
                     </button>
-                    {% include "users_page\partials\countOfProduct.html" %}
+                    <input class="input-counter" id="number__{{product.product.id}}" value="{{product.count}}" disabled ></input>
                     <button type="button" class="button-counter" aria-label="Додати ще один товар"
                         id="cart-counter-increment-button" 
+                        onclick="countPlus()"
                         hx-post="{% url 'addCountBin' product.product.id %}" hx-target="#bin-content" hx-swap="outerHTML">
                         +
                     </button>

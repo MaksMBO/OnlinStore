@@ -31,19 +31,21 @@ function BinDell(){
 }
 
 function countPlus() {
-    setTimeout('addCount()', 500);
+    var inp = document.getElementById("count");
+    inp.textContent = parseInt(inp.textContent)+1;
 }
 
-function addCount() {
+function countMinus(id){
     var inp = document.getElementById("count");
-    var all = document.getElementsByClassName("product");
-    all = all.length;
-    inp.textContent = all;
+    var my_inp = document.getElementById("number__"+id)
+    inp.textContent = parseInt(inp.textContent) - my_inp.value;
 }
 
-function countMinus(){
+function clickMinus(id) {
     var inp = document.getElementById("count");
-    var all = document.getElementsByClassName("product");
-    all = all.length - 1;
-    inp.textContent = all;
+    var my_inp = document.getElementById("number__"+id)
+    if (my_inp.value > 1) {
+        inp.textContent = parseInt(inp.textContent) - 1;
+    }    
 }
+

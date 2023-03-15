@@ -13,3 +13,8 @@ def sum_price(value):
 @register.filter(name='mult')
 def mult_price(price, count):
     return price * count
+
+@register.filter(name='count_in_bin')
+def count_in_bin(bin):
+    temp = [i.count for i in bin.all()]
+    return sum(temp) 
