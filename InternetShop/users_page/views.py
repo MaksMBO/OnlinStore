@@ -112,6 +112,7 @@ def logout_acc(request):
     return redirect(request.META.get('HTTP_REFERER'))
 
 def addbin(request, id):
+    print("aboab")
     bin_product = Products.objects.get(id=id)
     bin_count = 1
     
