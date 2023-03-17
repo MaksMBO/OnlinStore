@@ -26,5 +26,8 @@
             </div>
         </div>
         {% endfor %}
+        {% if not products %}
+        <div class="not_product">Нажаль на даний момент даного товару не існує :(</div>
+        {% endif %}
     </div>
 </div>

@@ -3121,3 +3121,11 @@ textarea {
     flex: 0 0 auto;
     width: 20%!important;
 }}
+
+.not_product {
+    color: #3c3c3c;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+}
