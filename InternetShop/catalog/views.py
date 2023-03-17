@@ -16,6 +16,7 @@ class Catalog(CatalogMixin, ListView):
             'title', 'price', 'img', 'type', 'brand', 'is_available',
         )
         context['brands'] = ProductsBrand.objects.all()
+        context['sort'] = "за популярністю"
         return render(request, 'catalog/catalog.html', context=context)
 
 
@@ -44,19 +45,30 @@ class FilterProductsJson(CatalogMixin, ListView):
             brand =  Q(brand__brand__in=all_brands)
         else:
             brand = Q(brand__brand__in=self.request.GET.getlist('brand'))
-       
+      
+        if self.request.GET.getlist('price_up'):
+            sort = 'price'
+            sort_text = 'за зростанням ціни'
+        elif self.request.GET.getlist('price_down'):
+            sort = '-price'
+            sort_text = 'за зменшенням ціни'
+        else:
+            sort = 'id'
+            sort_text = 'за популярністю'
+            
         query = Products.objects.filter(
             brand &
             Q(price__gte=self.request.GET.get('price_start'), price__lte=self.request.GET.get('price_end'))
-            ).prefetch_related('img').values('title', 'price', 'img__img', 'id').distinct()
+            ).prefetch_related('img').values('title', 'price', 'img__img', 'id').distinct().order_by(sort)
     
-        return query
+        return query, sort_text
 
     def get(self, request, *args, **kwargs):
-        queryset = list(self.get_queryset())  
+        queryset, sort_text = self.get_queryset()
         temp = []
         temp.clear()
 
+        queryset = list(queryset)
         my_len = len(queryset)    
         i = 0
         while i < my_len:
@@ -67,8 +79,8 @@ class FilterProductsJson(CatalogMixin, ListView):
                 del queryset[i]
                 my_len -= 1
                 
-        context= {'products': queryset}
+        context= {'products': queryset,
+                  'sort': sort_text}
        
-
         return render(request, 'catalog/partials/catalog__product.html', context=context)
     

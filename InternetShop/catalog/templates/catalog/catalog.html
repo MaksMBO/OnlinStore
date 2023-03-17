@@ -52,6 +52,7 @@ Catalog
         </div>
     </section>
 
+    <form hx-get="{% url 'filter_ajax' %}" hx-target="#catalog__product" hx-swap="outerHTML" >
     <section class="sorting">
         <div class="container">
             <div class="catalog__palce">
@@ -78,7 +79,7 @@ Catalog
                 <div class="d-flex flex-row align-items-center">
 
                     <div class="d-flex flex-row align-items-center sorting__filter">
-                        <p class="m-0">за популярністю</p>
+                        <p class="m-0" id="sort_by">{{sort}}</p>
                         <div class="sorting__menu">
                             <svg viewBox="0 0 24 24" fill="#3B6D9A" class="sorting__svg" id="sorting__svg">
                                 <path
@@ -92,15 +93,20 @@ Catalog
 
             <div class="sorting__list" id="sorting__list">
                 <ul>
-                    <a href="#">
-                        <li>за популярністю</li>
-                    </a>
-                    <a href="#">
-                        <li>за зростанням ціни</li>
-                    </a>
-                    <a href="#">
-                        <li>за зменшенням ціни</li>
-                    </a>
+                    <button class="button_checkbox_sort">
+                        <input  type="checkbox" class="checkbox_sort" id="popular" name="popular" hidden>
+                        <label type="submit" for="popular">за популярністю</label>
+                    </button>
+            
+                    <button class="button_checkbox_sort">
+                        <input  type="checkbox" class="checkbox_sort" id="price_up" name="price_up" hidden>
+                        <label type="submit" for="price_up">за зростанням ціни</label>
+                    </button>
+            
+                    <button class="button_checkbox_sort">
+                        <input  type="checkbox" class="checkbox_sort" id="price_down" name="price_down" hidden>
+                        <label type="submit" for="price_down">за зменшенням ціни</label>
+                    </button>
                 </ul>
             </div>
 
@@ -130,7 +136,7 @@ Catalog
                         </svg>
                     </div>
 
-                    <form hx-get="{% url 'filter_ajax' %}" hx-target="#catalog__product" hx-swap="outerHTML" >
+                    
                     <div id="price__filter__content">
                         <div class="filter__price__choose">
                             
@@ -195,7 +201,7 @@ Catalog
                             </svg>
                         </div>
                     </div>
-                    </form>
+                    
 
                     <hr>
 
@@ -943,6 +949,7 @@ Catalog
             
         </div>
     </section>
+</form> 
 </body>
 {% endblock %}
 
@@ -960,4 +967,6 @@ Catalog
 <script src="{% static 'js/showMore.js'%}"></script>
 <script src="{% static 'js/hide.js'%}"></script>
 <script src="{% static 'js/hide_bin.js'%}"></script>
+<script src="{% static 'js/reload_with_htmx.js'%}"></script>
+
 {% endblock %}

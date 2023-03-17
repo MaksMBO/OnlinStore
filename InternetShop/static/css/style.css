@@ -3129,3 +3129,14 @@ textarea {
     font-weight: 600;
     font-size: 32px;
 }
+
+.button_checkbox_sort {
+    background: none!important;
+    border: none!important;
+    list-style: none;
+    padding: 0 16px;
+    height: 40px;
+    color: #3B6D9A;
+    display: flex;
+    align-items: center;
+}
